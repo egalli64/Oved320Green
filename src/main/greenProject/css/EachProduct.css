@@ -1,0 +1,43 @@
+.MainTitleGreen {
+	color: #22d226;
+	font-family: 'Lucida Calligraphy';
+    font-size: 150px;
+    text-align: center;
+}
+
+}
+
+#descrizione {
+	font: 30px Arial, sans-serif;
+    text-align: center;
+    line-height: 150%;
+    
+}
+
+.subTitleProd {
+	color: #22d226;
+	font-family: 'Lucida Calligraphy';
+    font-size: 40px;
+    text-align: center;
+}
+
+
+
+.generalProd {
+	font: 20px Arial, sans-serif;
+    line-height: 100%;
+    
+}
+
+#prezzo {
+	color: #22d226;
+	font: 20px Arial, sans-serif;
+    text-align: center;
+    line-height: 100%;	
+	
+	
+}
+
+#centered {
+	text-align: center;
+} 
