@@ -1,5 +1,5 @@
 .MainTitleGreen {
-	color: #1ba51e;
+	color: #22d226;
 	font-family: 'Lucida Calligraphy';
     font-size: 150px;
     text-align: center;
@@ -17,5 +17,21 @@
 	font: 30px Arial, sans-serif;
     text-align: center;
     line-height: 150%;
+    
+}
+
+.subTitleGreen {
+	color: #22d226;
+	font-family: 'Lucida Calligraphy';
+    font-size: 60px;
+    text-align: center;
+}
+
+
+
+.generalText {
+	font: 20px Arial, sans-serif;
+    text-align: center;
+    line-height: 100%;
     
 }

@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>MyGreenPage</title>
+<title>New User Page</title>
 <link rel="stylesheet" type="text/css" href="css/Page.css" />
 <script type="text/javascript" src="js/homePage.js" async="true"></script>
 <!--inizio bootstrap -->
@@ -13,6 +13,7 @@
 <!--fine bootstrap -->
 </head>
 <body>
+
 
 
 <!-- titolo -->
@@ -47,26 +48,16 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+<br> <br>
 
-<p class="Citazioni" id="frase"> “Il mondo è un bel posto e per esso vale la pena di lottare.” <p>
+<hr> <hr>
 
-<div class="row">
-				<div class="col-2"></div>
-				<div class="col-12">
-					<p class="introduzione"> <br> <br> 
-					Ciao! Siamo un piccolo gruppo di appassionate al cibo e alla sostenibilità. Nel nostro piccolo cerchiamo di garantirvi alimenti freschi, genuini e di qualità rispettando l’ambiente e le sue necessità.
-					<br>Dai un’occhiata ai nostri prodotti e scegli ciò che preferisci tra la nostra vasta gamma di offerte. Siamo certe che troverai qualcosa di appetitoso e sfizioso da portare a casa!
-					<br> Accedi  </a> per iniziare...<br><br>
-					</p>
-				</div>	
-</div><hr><hr>
-			
 
-<!-- accedi -->
+<!-- inseriemnto dati -->
 			<div class="row">
 				<div class="col-1"></div>
 				<div class="col-12">
-					<p class="subTitleGreen"> Accedi: <br></p>
+					<p class="subTitleGreen"> Iscriviti: <br></p>
 				</div>
 			</div>	
 			
@@ -76,11 +67,46 @@
 			<div class="col-4"></div>
 				<div class="col-20">
 					<form action="/comment" method="get">
+						<br>
+						<div>
+						<label for="firstName" class="data">Il tuo nome:  </label>
+						<input type="text" name="firstName"  
+						placeholder="Nome" size="30" >
+						</div>
+						<br>
+						
+						<br>
+						<div>
+						<label for="lastName" class="data">Il tuo cognome:  </label>
+						<input type="text" name="lastName"  
+						placeholder="Cognome" size="30" >
+						</div>
+						<br>
+						
+						<br>
+						<div>
+						<label for="address" class="data">Il tuo indirizzo:  </label>
+						<input type="text" name="address"  
+						placeholder="Via xx, n" size="30" >
+						</div>
+						<br>
+						
+						<br>
+						<div>
+						<label for="city" class="data">Città:  </label>
+						<input type="text" name="city"  
+						placeholder="città" size="30" >
+						</div>
+						<br>
+						
+						
+						<br>
 						<div>
 						<label for="userName" class="data">UserName:  </label>
 						<input type="text" name="userName"  
 						placeholder="Nome Utente" size="30" >
 						</div>
+						
 						<br>
 						<div>
 						<label for="psw" class="data">Password:  </label>
@@ -89,53 +115,21 @@
 						<br>
 		
 						<br>
-						<button type="submit"> LogIn</button>
+						<button type="submit">Iscriviti...</button>
 					</form>
 					<br> <br>
-					<p class="generalText"> Non sei ancora iscritto? <a  href="NewUser.html">Fallo subito! </a>  </p>
+					<p class="generalText"> Non sei ancora iscritto? <a  href="accesso.html">Fallo subito! </a>  </p>
 					</div>
 			</div>	
 			<hr> <hr>
-		
-			
-				
-<!-- manda mail -->
-			<div class="row">
-				<div class="col-1"></div>
-				<div class="col-12">
-					<p class="subTitleGreen"> Contattaci per ulteriori informazioni: <br></p>
-				</div>
-			</div>	
-			
-					
-	
-			<div class="row">
-			<div class="col-4"></div>
-				<div class="col-20">
-					<form action="/comment" method="get">
-						<div>
-						<label for="mail" class="data">E-mail:  </label>
-						<input type="text" name="mail" id="mail" 
-						placeholder="inserisci la tua mail" size="30" >
-						</div>
-						<br>
-						<div>
-						<label for="obj" class="data">Oggetto:  </label>
-						<input type="text" name="obj" 
-						placeholder="oggetto.." size="30" >
-						</div>
-						<br>
-						<div>
-						<label for="contenuto" class="data">Messaggio:  </label>
-						<textarea rows="5" cols="70" name="contenuto">Buongiorno, ...</textarea>
-						</div>
-						<br>
-						<button type="submit"> Invia...</button>
-					</form>
-					</div>
-			</div>			
-			<hr> <hr>
-	
+
+
+
+
+
+
+
+
 <!-- informazioni personali -->	
 			<div class="row">
 				<div class="col-2"></div>
@@ -170,7 +164,6 @@
 				</div>
 			</div>				
 			<hr><hr>
-
 
 
 </body>
