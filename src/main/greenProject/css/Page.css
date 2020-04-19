@@ -1,0 +1,21 @@
+.MainTitleGreen {
+	color: #1ba51e;
+	font-family: 'Lucida Calligraphy';
+    font-size: 150px;
+    text-align: center;
+}
+
+
+
+#frase {
+	font-family:Courier;    
+    font-size: 35px;
+    text-align: center;
+}
+
+.introduzione {
+	font: 30px Arial, sans-serif;
+    text-align: center;
+    line-height: 150%;
+    
+}
