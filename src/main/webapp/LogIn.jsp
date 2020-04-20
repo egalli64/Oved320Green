@@ -7,7 +7,7 @@
 <title>Successful log in</title>
 </head>
 <body>
-<p> Complimenti! il tuo log in è anadto a buon fine, clicca per continuare</p>
+<p> Complimenti! il tuo login è andato a buon fine, clicca per continuare</p>
 <p> Request parameter name: checked ${param.name} </p>
 <p> Request parameter password: checked ${param.password} </p>
 

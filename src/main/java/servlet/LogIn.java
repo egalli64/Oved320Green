@@ -33,7 +33,7 @@ public class LogIn extends HttpServlet {
             RequestDispatcher rd = request.getRequestDispatcher("LogIn.jsp");
             rd.forward(request, response);
         } else {
-            RequestDispatcher rd = request.getRequestDispatcher("FailedLogIn.jsp");
+            RequestDispatcher rd = request.getRequestDispatcher("/FailedLogIn.jsp");
             rd.forward(request, response);
         }
     }
