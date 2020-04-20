@@ -1,4 +1,87 @@
+-- source this script from mySQL
 use green;
+
+-- TABELLA INTERMEDIA PRODOTTI e ORDINI --
+drop table if exists intermedia;
+create table intermedia
+(
+
+order_id int,
+product_id int 
+);
+
+insert into intermedia (order_id,product_id) 
+values ('1','2');
+
+select * from intermedia;
+
+
+
+-- ORDERS -- 
+drop table if exists orders;
+
+create table orders
+(
+
+order_id integer primary key auto_increment,
+order_date date,
+client_id int 
+);
+
+select * from orders;
+
+insert into orders (order_id,order_date, client_id) 
+values ('1','','');
+
+
+-- ------    -------    ---------  PRODUCTS ------    -------    ---------  -- 
+drop table if exists products;
+create table products
+(
+
+product_id int primary key not null,
+product_name varchar(25) not null,
+price_money decimal(6,2) not null
+);
+
+select * from products;
+
+insert into products (product_id,product_name, price_money) 
+values ('1','Scaldatelli','2.50');
+insert into products (product_id,product_name, price_money) 
+values ('2', 'Biscotti da Latte', '3.00');
+insert into products (product_id,product_name,price_money) 
+values ('3', ' Uova', '2.00');
+insert into products (product_id,product_name,price_money)  
+values ('4', 'Carote','1.50');
+insert into products (product_id,product_name,price_money)
+values ('5', 'Pasta di Mandorle', '10.00');
+insert into products (product_id,product_name,price_money)
+values ('6','Riso ','4.00');
+insert into products (product_id,product_name,price_money)
+values ('7','Vino', '22.00');
+insert into products (product_id,product_name,price_money)
+values ('8','Caffè', '1.99');
+insert into products (product_id,product_name,price_money)
+values ('9','Olive','1.20');
+insert into products (product_id,product_name,price_money)
+values ('10','Mais','0.89');
+insert into products (product_id,product_name,price_money)
+values ('11','Latte','1.10');
+insert into products (product_id,product_name,price_money)
+values ('12','Pasta integrale','1.60');
+insert into products (product_id,product_name,price_money)
+values ('13','Pomodori','2.10');
+insert into products (product_id,product_name,price_money)
+values ('14','Mele','1.80');
+insert into products (product_id,product_name,price_money)
+values ('16','Burro','1.45');
+
+
+
+
+-- -------   ---------      CLIENTS      ------    -------    ---------     ------------ 
+
 drop table if exists clients;
 create table clients(
 	client_id integer primary key auto_increment, 
@@ -68,3 +151,6 @@ insert into clients (client_id, username, psw, first_name, last_name, email, pho
 insert into clients (client_id, username, psw, first_name, last_name, email, phone_number, address, n_address,CAP, city) values ('152','phall','abc123','Peter','Hall','PHALL','011.44.1344.478968', 'Via Flavia','83','00187','Roma');
 insert into clients (client_id, username, psw, first_name, last_name, email, phone_number, address, n_address,CAP, city) values ('153','colsen','abc123','Christopher','Olsen','COLSEN','011.44.1344.498718','Via Flavia','81','00187','Roma');
 insert into clients (client_id, username, psw, first_name, last_name, email, phone_number, address, n_address,CAP, city) values ('154','ncambrau','abc123','Nanette','Cambrault','NCAMBRAU','011.44.1344.987668', 'Via Belisario','102','00187','Roma');
+
+
+commit;

@@ -4,7 +4,7 @@ use green;
 create table orders
 (
 
-order_id int primary key not null,
+order_id integer primary key auto_increment,
 order_date date,
 client_id int 
 );
