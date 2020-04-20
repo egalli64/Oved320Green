@@ -4,7 +4,7 @@ create table products
 
 product_id int primary key not null,
 product_name varchar(25) not null,
-price_money null
+price_money decimal 
 );
 
 select * from products;
