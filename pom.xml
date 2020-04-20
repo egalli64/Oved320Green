@@ -15,6 +15,6 @@
 	</properties>
 	
 	<build>
-        <finalName>mswa</finalName>
+        <finalName>green</finalName>
     </build>
 </project>
