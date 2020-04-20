@@ -1,4 +1,4 @@
-package javaBeans;
+package Dao;
 
 
 public class Product {
