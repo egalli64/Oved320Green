@@ -1,6 +1,7 @@
 package javaBeans;
 
 
+
 public class Clients {
 	private int clientId;	   
 	private String firstName;
