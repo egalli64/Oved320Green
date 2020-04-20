@@ -1,13 +1,13 @@
 package javaBeans;
 
-//servono solo i getters in realta, giusto?
+
 
 public class Clients {
-	private int clientId;	   //or String?
+	private int clientId;	   
 	private String firstName;
 	private String lastName;
-	private String indirizzo;     //non mi è chiaro cosa si intende per frequenza? 
-	private String citta;    //or String?
+	private String indirizzo;    
+	private String citta;   
 	private String numeroCell;
 	private String mail;
 	private String userName;
@@ -87,6 +87,5 @@ public class Clients {
 		this.password = password;
 	}
 	
-
 
 }
