@@ -1,10 +1,6 @@
 
 use green;
-<<<<<<< HEAD
 
-=======
-drop table products ;
->>>>>>> branch 'master' of https://github.com/egalli64/Oved320Green.git
 create table products
 (
 
@@ -61,5 +57,5 @@ values ('16','Burro bologico','1.45');
 
 
 
-select * from products;
+
 
