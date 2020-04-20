@@ -1,4 +1,4 @@
-package Dao;
+package servlet;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -15,6 +15,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import Dao.ClientDao;
+
 
 @WebServlet("/Login")
 public class LogIn extends HttpServlet {
@@ -25,7 +27,8 @@ public class LogIn extends HttpServlet {
         String userName = request.getParameter("userName");
         String password = request.getParameter("password");
 
-        if (exists (userName, password)) {
+        ClientDao dao = new ClientDao();
+        if (dao.exists (userName, password)) {
             // TODO: setAttribute() per userName
             RequestDispatcher rd = request.getRequestDispatcher("LogIn.jsp");
             rd.forward(request, response);
