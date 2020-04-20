@@ -18,7 +18,7 @@ public class LogIn extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String userName = request.getParameter("userName");
-        String password = request.getParameter("password");
+        String password = request.getParameter("psw");
 
         ClientDao dao = new ClientDao();
         if (dao.exists (userName, password)) {
@@ -26,7 +26,7 @@ public class LogIn extends HttpServlet {
             RequestDispatcher rd = request.getRequestDispatcher("LogIn.jsp");
             rd.forward(request, response);
         } else {
-            RequestDispatcher rd = request.getRequestDispatcher("/FailedLogIn.jsp");
+            RequestDispatcher rd = request.getRequestDispatcher("FailedLogIn.jsp");
             rd.forward(request, response);
         }
     }

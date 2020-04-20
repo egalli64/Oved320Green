@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 
 public class ClientDao {
     static final String URL = "jdbc:mysql://localhost:3306/me?serverTimezone=Europe/Rome";
-    static final String USER = "me";
+    static final String USER = "green";
     static final String PASSWORD = "password";
     static final String CLIENTS = "SELECT username, psw FROM clients WHERE username=? and psw=?";
 
