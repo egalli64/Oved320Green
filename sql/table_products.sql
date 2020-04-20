@@ -36,15 +36,16 @@ values ('11','Latte','1.10');
 insert into products (product_id,product_name,price_money)
 values ('12','Pasta fresca','1.60');
 insert into products (product_id,product_name,price_money)
-values ('13','Pomodori Biologici','2.10');
+values ('13','Pomodori','2.10');
 insert into products (product_id,product_name,price_money)
-values ('14','Amarena','18.00');
+values ('14','Amarene','18.00');
 insert into products (product_id,product_name,price_money)
-values ('16','Burro bologico','1.45');
+values ('16','Burro','1.45');
 
 
 
 
+select * from products; 
 
 
 
