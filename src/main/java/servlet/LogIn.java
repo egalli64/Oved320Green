@@ -1,6 +1,8 @@
 package servlet;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,6 +29,19 @@ public class LogIn extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		
+		String userName = request.getParameter("userName");
+		String password = request.getParameter("password");
+		
+		
+		if (userName.equals( "") && password.contentEquals( "")) {
+			RequestDispatcher rd = request.getRequestDispatcher("LogIn.jsp");
+			rd.forward(request, response);
+		}else {
+			RequestDispatcher rd = request.getRequestDispatcher("FailedLogIn.jsp");
+			rd.forward(request, response);
+		}
 	}
 
 	/**
