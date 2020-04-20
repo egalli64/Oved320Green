@@ -16,76 +16,51 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import javaBeans.Clients;
-import s08.Coder;
 
-/**
- * Servlet implementation class LogIn
- */
-@WebServlet("/LogIn")
+@WebServlet("/Login")
 public class LogIn extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-    /**
-     * Default constructor. 
-     */
-    public LogIn() {
-        // TODO Auto-generated constructor stub
+    private static final String URL = "jdbc:mysql://localhost:3306/me?serverTimezone=Europe/Rome";
+    private static final String USER = "me";
+    private static final String PASSWORD = "password";
+
+    // MYSQL username UNIQUE!
+    private static final String CLIENTS = "SELECT username, psw FROM clients WHERE username=? and psw=?";
+
+    // DAO
+    private boolean exists(String name, String password) {
+        try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
+                PreparedStatement prepStmt = conn.prepareStatement(CLIENTS)) {
+            prepStmt.setString(1, name);
+            prepStmt.setString(1, password);
+
+            try (ResultSet rs = prepStmt.executeQuery()) {
+                return rs.next();
+            }
+        } catch (Exception e) {
+            return false;
+        }
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-    
-   
-    
-    
-    
-    
-    
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-		
-		
-		String userName = request.getParameter("userName");
-		String password = request.getParameter("password");
-		
-		
-		
-		
-		
-		 private static final String URL = "jdbc:mysql://localhost:3306/me?serverTimezone=Europe/Rome";
-		    private static final String USER = "me";
-		    private static final String PASSWORD = "password";
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        String userName = request.getParameter("userName");
+        String password = request.getParameter("password");
 
-		    private static final String CLIENTS = "SELECT username, psw FROM clients ";
+        if (exists(userName, password)) {
+            // TODO: setAttribute() per userName
+            RequestDispatcher rd = request.getRequestDispatcher("LogIn.jsp");
+            rd.forward(request, response);
+        } else {
+            RequestDispatcher rd = request.getRequestDispatcher("FailedLogIn.jsp");
+            rd.forward(request, response);
+        }
+    }
 
-		    public List<Clients> getClients() throws SQLException {
-		        try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
-		                PreparedStatement prepStmt = conn.prepareStatement(CLIENTS)) {
-		           		
-		        	
-		        	try (ResultSet rs = prepStmt.executeQuery()) {
-		        		boolean found = false;
-		        	
-		                   while (rs.next() && !found) {
-		                       
-							if (userName.equals(rs.next()) && password.contentEquals( "")) {
-								found = true;
-								RequestDispatcher rd = request.getRequestDispatcher("LogIn.jsp");
-								rd.forward(request, response);
-							}else {
-								RequestDispatcher rd = request.getRequestDispatcher("FailedLogIn.jsp");
-								rd.forward(request, response);
-							}
-	
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        doGet(request, response);
+    }
 
 }
