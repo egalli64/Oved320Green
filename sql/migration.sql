@@ -10,8 +10,8 @@ order_id int,
 product_id int 
 );
 
-insert into intermedia (order_id,product_id) 
-values ('1','2');
+insert into intermedia (order_id,product_id)  values ('1','2');
+insert into intermedia (order_id,product_id)  values ('2','7');
 
 select * from intermedia;
 
@@ -24,14 +24,18 @@ create table orders
 (
 
 order_id integer primary key auto_increment,
-order_date date,
+-- order_date date,-- 
 client_id int 
 );
 
 select * from orders;
 
-insert into orders (order_id,order_date, client_id) 
-values ('1','','');
+insert into orders (order_id, client_id) values ('1','2');
+insert into orders (order_id, client_id) values ('2','3');
+insert into orders (order_id, client_id) values ('3','2');
+insert into orders (order_id, client_id) values ('4','5');
+insert into orders (order_id, client_id) values ('5','7');
+
 
 
 -- ------    -------    ---------  PRODUCTS ------    -------    ---------  -- 
@@ -45,11 +49,10 @@ price_money decimal(6,2) not null
 );
 
 select * from products;
-
 insert into products (product_id,product_name, price_money) 
 values ('1','Scaldatelli','2.50');
 insert into products (product_id,product_name, price_money) 
-values ('2', 'Biscotti da Latte', '3.00');
+values ('2', 'Biscotti', '3.00');
 insert into products (product_id,product_name,price_money) 
 values ('3', ' Uova', '2.00');
 insert into products (product_id,product_name,price_money)  
@@ -63,7 +66,7 @@ values ('7','Vino', '22.00');
 insert into products (product_id,product_name,price_money)
 values ('8','Caffè', '1.99');
 insert into products (product_id,product_name,price_money)
-values ('9','Olive','1.20');
+values ('9','Yogurt','1.20');
 insert into products (product_id,product_name,price_money)
 values ('10','Mais','0.89');
 insert into products (product_id,product_name,price_money)
@@ -75,7 +78,9 @@ values ('13','Pomodori','2.10');
 insert into products (product_id,product_name,price_money)
 values ('14','Mele','1.80');
 insert into products (product_id,product_name,price_money)
-values ('16','Burro','1.45');
+values ('16','Pane','1.45');
+insert into products (product_id,product_name,price_money)
+values ('16','Lenticchie','1.00');
 
 
 
@@ -101,13 +106,13 @@ select * from clients;
 
 -- alter table departments add constraint dept_mgr_fk foreign key(manager_id) references employees(employee_id);
 
-insert into clients (client_id, username, psw, first_name, last_name, username, psw, email, phone_number, address, n_address,CAP, city) values ('198','doconnel','abc123','Donald','OConnell','DOCONNEL','650.507.9833', 'Via Cola di Rie','135','00989','Roma');
-insert into clients (client_id, username, psw, first_name, last_name, email, phone_number, address, n_address,CAP, city) values ('199','dgrant','abc123','Douglas','Grant','DGRANT','650.507.9844','Calle della Testa','93','10934','Venice');
-insert into clients (client_id, username, psw, first_name, last_name, email, phone_number, address, n_address,CAP, city) values ('200','jwhalen','abc123','Jennifer','Whalen','JWHALEN','515.123.4444','Via Adalberto Catena' ,'231', '20121','Milano');
-insert into clients (client_id, username, psw, first_name, last_name, email, phone_number, address, n_address,CAP, city) values ('201','mhartste','abc123','Michael','Hartstein','MHARTSTE','515.123.5555', 'Via Adalberto Catena', '189','20121', 'Milano');
-insert into clients (client_id, username, psw, first_name, last_name, email, phone_number, address, n_address,CAP, city) values ('202','pfay','abc123','Pat','Fay','PFAY','603.123.6666', 'Via Adalberto Catena', '205','20121', 'Milano');
-insert into clients (client_id, username, psw, first_name, last_name, email, phone_number, address, n_address,CAP, city) values ('203','smavris','abc123','Susan','Mavris','SMAVRIS','515.123.7777', 'Via Ancona', '45','20121','Milano');
-insert into clients (client_id, username, psw, first_name, last_name, email, phone_number, address, n_address,CAP, city) values ('204','hbaer','abc123','Hermann','Baer','HBAER','515.123.8888', 'Via Ancona', '62','20121', 'Milano');
+insert into clients (client_id, username, psw, first_name, last_name, email, phone_number, address, n_address,CAP, city) values ('1','doconnel','abc123','Donald','OConnell','DOCONNEL','650.507.9833', 'Via Cola di Rie','135','00989','Roma');
+insert into clients (client_id, username, psw, first_name, last_name, email, phone_number, address, n_address,CAP, city) values ('2','dgrant','abc123','Douglas','Grant','DGRANT','650.507.9844','Calle della Testa','93','10934','Venice');
+insert into clients (client_id, username, psw, first_name, last_name, email, phone_number, address, n_address,CAP, city) values ('3','jwhalen','abc123','Jennifer','Whalen','JWHALEN','515.123.4444','Via Adalberto Catena' ,'231', '20121','Milano');
+insert into clients (client_id, username, psw, first_name, last_name, email, phone_number, address, n_address,CAP, city) values ('4','mhartste','abc123','Michael','Hartstein','MHARTSTE','515.123.5555', 'Via Adalberto Catena', '189','20121', 'Milano');
+insert into clients (client_id, username, psw, first_name, last_name, email, phone_number, address, n_address,CAP, city) values ('5','pfay','abc123','Pat','Fay','PFAY','603.123.6666', 'Via Adalberto Catena', '205','20121', 'Milano');
+insert into clients (client_id, username, psw, first_name, last_name, email, phone_number, address, n_address,CAP, city) values ('6','smavris','abc123','Susan','Mavris','SMAVRIS','515.123.7777', 'Via Ancona', '45','20121','Milano');
+insert into clients (client_id, username, psw, first_name, last_name, email, phone_number, address, n_address,CAP, city) values ('7','hbaer','abc123','Hermann','Baer','HBAER','515.123.8888', 'Via Ancona', '62','20121', 'Milano');
 insert into clients (client_id, username, psw, first_name, last_name, email, phone_number, address, n_address,CAP, city) values ('205','shiggins','abc123','Shelley','Higgins','SHIGGINS','515.123.8080', 'Largo Antonio Greppi','8','20121', 'Milano');
 insert into clients (client_id, username, psw, first_name, last_name, email, phone_number, address, n_address,CAP, city) values ('206','wgietz','abc123','William','Gietz','WGIETZ','515.123.8181', 'Largo Antonio Greppi','12','20121', 'Milano');
 insert into clients (client_id, username, psw, first_name, last_name, email, phone_number, address, n_address,CAP, city) values ('100','sking','abc123','Steven','King','SKING','515.123.4567', 'Largo Antonio Greppi','17','20121', 'Milano');
