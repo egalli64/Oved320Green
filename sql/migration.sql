@@ -77,10 +77,74 @@ insert into products (product_id,product_name,price_money)
 values ('16','Pane','1.45');
 insert into products (product_id,product_name,price_money)
 values ('16','Lenticchie','1.00');
-
-
-
-
+insert into products (product_id,product_name,price_money)
+values ('17','Orecchiette','3.00');
+insert into products (product_id,product_name,price_money)
+values ('18','Fusilli di Lenticchie Rosse','7.00');
+insert into products (product_id,product_name,price_money)
+values ('19','Maccheroncini di Riso e Lupini', '6.50');
+insert into products (product_id,product_name,price_money)
+values ('20','Cavatelli','2.50');
+insert into products (product_id,product_name,price_money)
+values ('21','Biscotti con Amarena','5.00');
+insert into products (product_id,product_name,price_money)
+values ('22','Bacche di Goji','3.50');
+insert into products (product_id,product_name,price_money)
+values('23','Tarallini al vino bianco','4.00');
+insert into products (product_id,product_name,price_money)
+values ('24','Taralli con uova','4.50');
+insert into products (product_id,product_name,price_money)
+values ('25','Tarallino con uova ricoperti di glassa','5.00');
+insert into products (product_id,product_name,price_money)
+values ('26','Mirtilli Rossi','1.70');
+insert products (product_id,produt_name,price_money)
+values ('27','Uvetta Sultanina','0.90');
+insert products (product_id,product_name,price_money)
+values ('28','Zenzero Nero','4.20');
+insert products (product_id,product_name,price_money)
+values ('29','Pinoli','10.00');
+insert products (product-id,product_name,price_money)
+values ('30','Nocciole Sgusciate','3.50');
+insert products (product_id,product_name,price_money)
+values ('31','Misto Frutta Benessere','3.30');
+insert products (product_id,product_name,price_money)
+values ('32','Misto Frutta Energizzante','3.10');
+insert products (product_id,product_name,price_money)
+values ('33','Origano di Agricoltura Biologica', '2.20');
+insert products (product_id,product_name,price_money)
+values ('34','Olio Extravergine di Oliva','7.50');
+insert products (produst_id,product_name,price_money)
+values ('35','Semi di Rucola','1.60');
+insert products (product_id,product_name,price_money)
+values ('36','Semi Insalata da Taglio','1.60');
+insert products (product_id,product_name,price_money)
+values ('37','Semi di Ravanello','1.60');
+insert products (product_id,product_name,price_money)
+values ('38','Semi di Basilico','1.60');
+insert products (product_id,product_name,price_money)
+values ('39','Cestini di Cocco','0.99');
+insert products (product_id,product_name,price_money)
+values ('40','Farina Manitoba Bio','4.20');
+insert products (product_id,product_name,price_money)
+values ('41','Farina di semi di Bio','5.20');
+insert products (product_id,product_name,price_money)
+values ('42','Farina di Farro Integrale Bio','4.60');
+insert products (product_id,product_name,price_money)
+values ('43','Farina Pane Bio','3.90');
+insert products (product_id,product_name,price_money)
+values ('44','Farina Pizza Bio','3.90');
+insert products (product_id,product_name,price_money)
+values ('45','Farina Dolci Bio','3.90');
+insert products (product_id,product_name,price_money)
+values ('46','Farina di Semi di Canapa Sativa Bio','5.18');
+insert products (product_id,product_name,price_money)
+values ('47','Mix Farina di Canapa Green','4.50');
+insert products (product_id,product_name,price_money)
+values ('48','Mix Farina Riso Venere Nero','3.10');
+insert products (product_id,product_name,price_money)
+values ('49','Mix Farina Riso Rosso','3.60');
+insert products (product_id,product_name,price_money)
+values ('50','Pasta Madre essiccata di Frumento','13.00');
 -- -------   ---------      CLIENTS      ------    -------    ---------     ------------ 
 
 drop table if exists clients;
