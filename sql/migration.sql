@@ -40,7 +40,7 @@ create table products
 (
 
 product_id int primary key not null,
-product_name varchar(25) not null,
+product_name varchar(50) not null,
 price_money decimal(6,2) not null
 );
 
@@ -97,13 +97,13 @@ insert into products (product_id,product_name,price_money)
 values ('25','Tarallino con uova ricoperti di glassa','5.00');
 insert into products (product_id,product_name,price_money)
 values ('26','Mirtilli Rossi','1.70');
-insert products (product_id,produt_name,price_money)
+insert products (product_id,product_name,price_money)
 values ('27','Uvetta Sultanina','0.90');
 insert products (product_id,product_name,price_money)
 values ('28','Zenzero Nero','4.20');
 insert products (product_id,product_name,price_money)
 values ('29','Pinoli','10.00');
-insert products (product-id,product_name,price_money)
+insert products (product_id,product_name,price_money)
 values ('30','Nocciole Sgusciate','3.50');
 insert products (product_id,product_name,price_money)
 values ('31','Misto Frutta Benessere','3.30');
@@ -113,7 +113,7 @@ insert products (product_id,product_name,price_money)
 values ('33','Origano di Agricoltura Biologica', '2.20');
 insert products (product_id,product_name,price_money)
 values ('34','Olio Extravergine di Oliva','7.50');
-insert products (produst_id,product_name,price_money)
+insert products (product_id,product_name,price_money)
 values ('35','Semi di Rucola','1.60');
 insert products (product_id,product_name,price_money)
 values ('36','Semi Insalata da Taglio','1.60');
