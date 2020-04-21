@@ -31,7 +31,7 @@ public class LogIn extends HttpServlet {
         logger.trace("called");
         try (ClientDao dao = new ClientDao(ds)) {
             request.setAttribute("clients", dao.getAll());
-            request.getRequestDispatcher("/s23/regions2.jsp").forward(request, response);
+            request.getRequestDispatcher("LogIn.jsp").forward(request, response);
         }
     }
     
