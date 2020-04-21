@@ -27,7 +27,7 @@ public class Clients {
 	}
 	
 	public Clients (String userName, String password) {
-		super();
+		//super();
 		this.userName = userName;
 		this.password = password;
 	}

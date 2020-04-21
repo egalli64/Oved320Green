@@ -52,10 +52,10 @@ public class Login3 extends HttpServlet {
     			
     			
     			//request.setAttribute("userName", userName);
-                RequestDispatcher rd = request.getRequestDispatcher("LogIn.jsp");
+                RequestDispatcher rd = request.getRequestDispatcher("LogIn.jsp");//
     		} else {
     			request.setAttribute("userName", userName);
-                RequestDispatcher rd = request.getRequestDispatcher("FailedLogIn.jsp");
+                RequestDispatcher rd = request.getRequestDispatcher("FailedLogIn.jsp");  //
                 rd.forward(request, response);
     		}
     		

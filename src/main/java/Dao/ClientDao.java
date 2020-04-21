@@ -80,10 +80,10 @@ public class ClientDao implements Closeable{
         }
     }
 	
-	public Optional<Clients> get(String nome, String password) {
+	public Optional<Clients> get(String userName, String password) {
         try (Statement stmt = conn.createStatement(); //
                 PreparedStatement ps = conn.prepareStatement(CLIENTS)) {
-            ps.setString(1, nome);
+            ps.setString(1, userName);
             ps.setString(2, password);
             try (ResultSet rs = ps.executeQuery()) {
                 if (rs.next()) {
