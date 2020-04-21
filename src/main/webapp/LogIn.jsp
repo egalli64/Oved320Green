@@ -52,14 +52,23 @@
 
 <br> <br>
 
+
+<!--  aggiunta rispetto a pagina prodotti!!!!!!! -->
+
+
 <hr> <hr>
+<h2 class="subTitleGreen" align = "right"> Benvenuto ${userName} ! </h2>
+<hr><hr>
+
+
+<!-- fine aggiunta rispetto a pagina prodotti!!!!!!! -->
 
 
 <!-- griglia prodotti-->
 
 <div id="gridproducts" class="grigliaprodotti" >
 <h2 class="subTitleGreen">Scopri i nostri prodotti freschi e coltivati in modo sostenibile</h2>
-<br> <br>
+<br> 
 
 <hr> <hr>
 

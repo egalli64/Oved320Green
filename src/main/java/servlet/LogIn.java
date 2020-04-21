@@ -23,9 +23,11 @@ public class LogIn extends HttpServlet {
         ClientDao dao = new ClientDao();
         if (dao.exists (userName, password)) {
             // TODO: setAttribute() per userName
+        	request.setAttribute("userName", userName);
             RequestDispatcher rd = request.getRequestDispatcher("LogIn.jsp");
             rd.forward(request, response);
         } else {
+        	request.setAttribute("userName", userName);
             RequestDispatcher rd = request.getRequestDispatcher("FailedLogIn.jsp");
             rd.forward(request, response);
         }
