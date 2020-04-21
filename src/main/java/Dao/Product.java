@@ -22,12 +22,14 @@ public class Product {
 		this.productId = productId;
 	}
 	
+	
 	public String getProductName() {
 		return productName;
 	}
 	public void setProductName(String productName) {
 		this.productId = productId;
 	}
+	
 	
 	public double getPrice() {
 		return price;
