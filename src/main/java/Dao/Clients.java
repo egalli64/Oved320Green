@@ -93,5 +93,15 @@ public class Clients {
 		this.password = password;
 	}
 	
+	
+	@Override
+	public String toString() {
+		return "[nome=" + userName + ", password=" + password + "]";
+	}
+
+	public static void main(String[] args) {	
+		Clients client= new Clients("erica", "password");
+		System.out.println(client.toString());
+	}
 
 }

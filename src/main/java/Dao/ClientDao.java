@@ -10,6 +10,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import javax.sql.DataSource;
 
@@ -19,9 +20,9 @@ import org.slf4j.LoggerFactory;
 import Dao.Clients;
 
 public class ClientDao implements Closeable{
-    static final String URL = "jdbc:mysql://localhost:3306/green?serverTimezone=Europe/Rome";
-    static final String USER = "green";
-    static final String PASSWORD = "password";
+    //static final String URL = "jdbc:mysql://localhost:3306/green?serverTimezone=Europe/Rome";
+    //static final String USER = "green";
+    //static final String PASSWORD = "password";
     static final String CLIENTS = "SELECT username, psw FROM clients WHERE username=? and psw=?";
 
     private static final Logger logger = LoggerFactory.getLogger(ClientDao.class);
@@ -63,12 +64,11 @@ public class ClientDao implements Closeable{
             throw new IllegalStateException("Database issue " + se.getMessage());
         }
     }
-}
+
     
-/*
+
 	public boolean exists(final String name, final String password) {
-        try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
-                PreparedStatement prepStmt = conn.prepareStatement(CLIENTS)) {
+        try (PreparedStatement prepStmt = conn.prepareStatement(CLIENTS)) {
             prepStmt.setString(1, name);
             prepStmt.setString(1, password);
 
@@ -79,6 +79,25 @@ public class ClientDao implements Closeable{
             return false;
         }
     }
-*/
+	
+	public Optional<Clients> get(String nome, String password) {
+        try (Statement stmt = conn.createStatement(); //
+                PreparedStatement ps = conn.prepareStatement(CLIENTS)) {
+            ps.setString(1, nome);
+            ps.setString(2, password);
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) {
+                   Clients my = new Clients(rs.getString(2), rs.getString(3));
+                    return Optional.of(my);
+                }
+            }
+        } catch (SQLException se) {
+            se.printStackTrace();
+        }
+
+        return Optional.empty();
+    }
+}
+
 
 
