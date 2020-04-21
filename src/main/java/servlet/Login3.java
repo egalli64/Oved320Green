@@ -40,22 +40,18 @@ public class Login3 extends HttpServlet {
 
     		if (dao.get(userName, password).isPresent()) {
     			HttpSession session = request.getSession();
-    			session.setAttribute(userName, password);
+    			
+    			session.setAttribute("userName", userName);
+    			session.setAttribute("password", password);
     			request.setAttribute("userName", userName);
     			request.setAttribute("password", password);
 
-    			// setting session to expiry in 30 mins
-    			session.setMaxInactiveInterval(30 * 60);
-    			Cookie userNamee = new Cookie("userName", userName);
-    			userNamee.setMaxAge(30 * 60);
-    			response.addCookie(userNamee);
     			
-    			
-    			//request.setAttribute("userName", userName);
-                RequestDispatcher rd = request.getRequestDispatcher("LogIn.jsp");//
+                RequestDispatcher rd = request.getRequestDispatcher("LogIn.jsp");
+                rd.forward(request, response);
     		} else {
     			request.setAttribute("userName", userName);
-                RequestDispatcher rd = request.getRequestDispatcher("FailedLogIn.jsp");  //
+                RequestDispatcher rd = request.getRequestDispatcher("FailedLogIn.jsp"); 
                 rd.forward(request, response);
     		}
     		
