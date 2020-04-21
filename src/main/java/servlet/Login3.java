@@ -25,7 +25,7 @@ import Dao.ClientDao;
 public class Login3 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	@Resource(name = "jdbc/me")
+	@Resource(name = "jdbc/green")
     private DataSource ds;
     
 
@@ -51,7 +51,7 @@ public class Login3 extends HttpServlet {
     			response.addCookie(userNamee);
     			
     			
-    			request.setAttribute("userName", userName);
+    			//request.setAttribute("userName", userName);
                 RequestDispatcher rd = request.getRequestDispatcher("LogIn.jsp");
     		} else {
     			request.setAttribute("userName", userName);

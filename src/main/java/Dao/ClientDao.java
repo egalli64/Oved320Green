@@ -70,7 +70,7 @@ public class ClientDao implements Closeable{
 	public boolean exists(final String name, final String password) {
         try (PreparedStatement prepStmt = conn.prepareStatement(CLIENTS)) {
             prepStmt.setString(1, name);
-            prepStmt.setString(1, password);
+            prepStmt.setString(2, password);
 
             try (ResultSet rs = prepStmt.executeQuery()) {
                 return rs.next();
@@ -87,7 +87,7 @@ public class ClientDao implements Closeable{
             ps.setString(2, password);
             try (ResultSet rs = ps.executeQuery()) {
                 if (rs.next()) {
-                   Clients my = new Clients(rs.getString(2), rs.getString(3));
+                   Clients my = new Clients(rs.getString(1), rs.getString(2));
                     return Optional.of(my);
                 }
             }
