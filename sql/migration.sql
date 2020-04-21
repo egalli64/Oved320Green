@@ -74,7 +74,7 @@ values ('13','Pomodori','2.10');
 insert into products (product_id,product_name,price_money)
 values ('14','Mele','1.80');
 insert into products (product_id,product_name,price_money)
-values ('16','Pane','1.45');
+values ('15','Pane','1.45');
 insert into products (product_id,product_name,price_money)
 values ('16','Lenticchie','1.00');
 insert into products (product_id,product_name,price_money)

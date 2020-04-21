@@ -64,7 +64,7 @@
         <div class="col-12">
             <p class="introduzione">
                 Ops! Qualcosa nel tuo login è andato storto... torna <a href="index.html"> indietro </a> per riprovare!
-                <br>
+               <br>
             </p>
         </div>
     </div>

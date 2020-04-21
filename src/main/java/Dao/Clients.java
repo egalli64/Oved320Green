@@ -26,6 +26,12 @@ public class Clients {
 		this.password = password;
 	}
 	
+	public Clients (String userName, String password) {
+		super();
+		this.userName = userName;
+		this.password = password;
+	}
+	
 	public int getClientId() {
 		return clientId;
 	}
