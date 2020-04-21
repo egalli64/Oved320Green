@@ -1,5 +1,6 @@
 package Dao;
 
+import java.io.Closeable;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -17,7 +18,7 @@ import org.slf4j.LoggerFactory;
 
 import Dao.Clients;
 
-public class ClientDao {
+public class ClientDao implements Closeable{
     static final String URL = "jdbc:mysql://localhost:3306/me?serverTimezone=Europe/Rome";
     static final String USER = "green";
     static final String PASSWORD = "password";
@@ -42,7 +43,7 @@ public class ClientDao {
         List<Clients> results = new ArrayList<>();
 
         try (Statement stmt = conn.createStatement(); //
-                ResultSet rs = stmt.executeQuery("select * from clients")) {
+                ResultSet rs = stmt.executeQuery("select username, psw from clients")) {
             while (rs.next()) {
                 results.add(new Clients(rs.getString("username"), rs.getString("psw")));
             }
@@ -54,13 +55,15 @@ public class ClientDao {
     }
 
   
+    @Override
     public void close() throws IOException {
         try {
             conn.close();
-        } catch (SQLException e) {
-            throw new IllegalStateException("Database issue " + e.getMessage());
+        } catch (SQLException se) {
+            throw new IllegalStateException("Database issue " + se.getMessage());
         }
     }
+}
     
 /*
 	public boolean exists(final String name, final String password) {
@@ -77,5 +80,5 @@ public class ClientDao {
         }
     }
 */
-}
+
 
