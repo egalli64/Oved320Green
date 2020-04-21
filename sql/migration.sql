@@ -13,9 +13,6 @@ product_id int
 insert into intermedia (order_id,product_id)  values ('1','2');
 insert into intermedia (order_id,product_id)  values ('2','7');
 
-select * from intermedia;
-
-
 
 -- ORDERS -- 
 drop table if exists orders;
@@ -28,7 +25,6 @@ order_id integer primary key auto_increment,
 client_id int 
 );
 
-select * from orders;
 
 insert into orders (order_id, client_id) values ('1','2');
 insert into orders (order_id, client_id) values ('2','3');
@@ -102,7 +98,7 @@ create table clients(
 	city varchar(20)
 );
 
-select * from clients;
+
 
 -- alter table departments add constraint dept_mgr_fk foreign key(manager_id) references employees(employee_id);
 
