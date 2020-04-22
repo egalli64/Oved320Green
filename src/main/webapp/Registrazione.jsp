@@ -57,7 +57,7 @@
 
 
 <hr> <hr>
-<h2 class="subTitleGreen" align = "right"> Bentornato ${userName} ! </h2>
+<h2 class="subTitleGreen" align = "right"> Benvenuto ${userName} ! </h2>
 <hr><hr>
 
 

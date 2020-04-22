@@ -6,24 +6,44 @@ public class Clients {
 	private int clientId;	   
 	private String firstName;
 	private String lastName;
-	private String indirizzo;    
+	private String indirizzo;
+	private String num_indirizzo;  
+	private String cap;
 	private String citta;   
 	private String numeroCell;
 	private String mail;
 	private String userName;
 	private String password;
 	
-	public Clients(int clientId,String firstName, String lastName,String indirizzo, String citta,String numeroCell, String mail, String userName, String password) {
+	
+	public Clients(int clientId,String firstName, String lastName,String indirizzo, String num_indirizzo, String cap, String citta,String numeroCell, String mail, String userName, String password) {
 		super();
 		this.clientId= clientId;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.indirizzo = indirizzo;
+		this.num_indirizzo= num_indirizzo;
+		this.cap=cap;
 		this.citta = citta;
 		this.numeroCell = numeroCell;
 		this.mail = mail;
 		this.userName = userName;
 		this.password = password;
+	}
+	
+	//Clients per NewClient
+	public Clients(String firstName, String lastName,String indirizzo, String num_indirizzo, String cap, String citta,String numeroCell, String mail, String userName, String password) {
+		super();
+		this.userName = userName;
+		this.password = password;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.mail = mail;
+		this.numeroCell = numeroCell;
+		this.indirizzo = indirizzo;
+		this.num_indirizzo= num_indirizzo;
+		this.cap=cap;
+		this.citta = citta;
 	}
 	
 	public Clients (String userName, String password) {
@@ -47,7 +67,7 @@ public class Clients {
 	public String getLastName() {
 		return lastName;
 	}
-	public void setFrequency(String lastName) {
+	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
 	
@@ -58,17 +78,31 @@ public class Clients {
 		this.indirizzo = indirizzo;
 	}
 	
-	public String getCitta() {
+	public String getNumIndirizzo() {
+		return num_indirizzo;
+	}
+	public void setNumIndirizzo(String num_indirizzo) {
+		this.num_indirizzo = num_indirizzo;
+	}
+	
+	public String getCity() {
 		return citta;
 	}
-	public void setCitta(String citta) {
+	public void setCity(String citta) {
 		this.citta = citta;
 	}
 	
-	public String getNumeroCell() {
+	public String getCap() {
+		return cap;
+	}
+	public void setCap(String cap) {
+		this.cap = cap;
+	}
+	
+	public String getNumber() {
 		return numeroCell;
 	}
-	public void setNumeroCell(String numeroCell) {
+	public void setNumber(String numeroCell) {
 		this.numeroCell = numeroCell;
 	}
 	
