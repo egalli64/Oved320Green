@@ -43,7 +43,7 @@ public class NewClient extends HttpServlet {
 			Clients us = new Clients(userName,password,firstName, lastName, mail, numeroCell, indirizzo, num_indirizzo, cap, city);
 			dao.NewClient(us);
 
-			RequestDispatcher rs = request.getRequestDispatcher("Registrazione.jsp");
+			RequestDispatcher rs = request.getRequestDispatcher("/Registrazione.jsp");
 			rs.forward(request, response);
 		}
 	}
