@@ -2,7 +2,7 @@ package Dao;
 
 
 
-public class Clients {
+public class Client {
 	private int clientId;	   
 	private String firstName;
 	private String lastName;
@@ -16,7 +16,7 @@ public class Clients {
 	private String password;
 	
 	
-	public Clients(int clientId,String firstName, String lastName,String indirizzo, String num_indirizzo, String cap, String citta,String numeroCell, String mail, String userName, String password) {
+	public Client(int clientId,String firstName, String lastName,String indirizzo, String num_indirizzo, String cap, String citta,String numeroCell, String mail, String userName, String password) {
 		super();
 		this.clientId= clientId;
 		this.firstName = firstName;
@@ -32,7 +32,7 @@ public class Clients {
 	}
 	
 	//Clients per NewClient
-	public Clients(String firstName, String lastName,String indirizzo, String num_indirizzo, String cap, String citta,String numeroCell, String mail, String userName, String password) {
+	public Client(String firstName, String lastName,String indirizzo, String num_indirizzo, String cap, String citta,String numeroCell, String mail, String userName, String password) {
 		super();
 		this.userName = userName;
 		this.password = password;
@@ -46,8 +46,8 @@ public class Clients {
 		this.citta = citta;
 	}
 	
-	public Clients (String userName, String password) {
-		//super();
+	public Client (String userName, String password) {
+		super();
 		this.userName = userName;
 		this.password = password;
 	}
@@ -134,7 +134,7 @@ public class Clients {
 	}
 
 	public static void main(String[] args) {	
-		Clients client= new Clients("erica", "password");
+		Client client= new Client("erica", "password");
 		System.out.println(client.toString());
 	}
 
