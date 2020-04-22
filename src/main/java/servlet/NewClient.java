@@ -13,7 +13,7 @@ import javax.sql.DataSource;
 
 
 import Dao.ClientDao;
-import Dao.Clients;
+import Dao.Client;
 
 @WebServlet("/NewClient")
 public class NewClient extends HttpServlet {
@@ -40,8 +40,8 @@ public class NewClient extends HttpServlet {
 		String city = request.getParameter("city");
 
 		try (ClientDao dao = new ClientDao(ds)) {
-			Clients us = new Clients(userName,password,firstName, lastName, mail, numeroCell, indirizzo, num_indirizzo, cap, city);
-			dao.NewClient(us);
+			Client us = new Client(userName,password,firstName, lastName, mail, numeroCell, indirizzo, num_indirizzo, cap, city);
+			dao.newClient(us);
 
 			RequestDispatcher rs = request.getRequestDispatcher("/Registrazione.jsp");
 			rs.forward(request, response);

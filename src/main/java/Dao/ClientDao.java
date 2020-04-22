@@ -4,7 +4,6 @@ package Dao;
 import java.io.Closeable;
 import java.io.IOException;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -18,12 +17,12 @@ import javax.sql.DataSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import Dao.Clients;
+import Dao.Client;
 
 public class ClientDao implements Closeable {
 
 	static final String CLIENTS = "SELECT username, psw FROM clients WHERE username=? and psw=?";
-	static final String NEWCLIENT = "INSERT INTO clients (username, psw, first_name, last_name, email, phone_number, address, n_address,CAP, city) values ('?','?','?','?','?','?','?','?','?','?')";
+	static final String NEWCLIENT = "INSERT INTO clients (username, psw, first_name, last_name, email, phone_number, address, n_address,CAP, city) values (?,?,?,?,?,?,?,?,?,?)";
 	
 	private static final Logger logger = LoggerFactory.getLogger(ClientDao.class);
 	private Connection conn;
@@ -38,14 +37,14 @@ public class ClientDao implements Closeable {
 		}
 	}
 
-	public List<Clients> getAll() {
+	public List<Client> getAll() {
 		logger.trace("called");
-		List<Clients> results = new ArrayList<>();
+		List<Client> results = new ArrayList<>();
 
 		try (Statement stmt = conn.createStatement();
 				ResultSet rs = stmt.executeQuery("select username, psw from clients")) {
 			while (rs.next()) {
-				results.add(new Clients(rs.getString("username"), rs.getString("psw")));
+				results.add(new Client(rs.getString("username"), rs.getString("psw")));
 			}
 		} catch (SQLException se) {
 			throw new IllegalStateException("Database issue " + se.getMessage());
@@ -55,19 +54,19 @@ public class ClientDao implements Closeable {
 	}
 	
 	//REGISTRAZIONE nuovo cliente 
-	 public void NewClient(Clients client) {
+	 public void newClient(Client client) {
 	        try (Statement stmt = conn.createStatement();
 	                PreparedStatement rs = conn.prepareStatement(NEWCLIENT)) {
-	            rs.setString(1, client.getUserName());
-	            rs.setString(2, client.getPassword());
-	            rs.setString(3, client.getFirstName());
-	            rs.setString(4, client.getLastName());
-	            rs.setString(5, client.getMail());
-	            rs.setString(6, client.getNumber());
-	            rs.setString(7, client.getIndirizzo());
-	            rs.setString(8, client.getNumIndirizzo());
-	            rs.setString(9, client.getCap());
-	            rs.setString(10, client.getCity());
+	        	rs.setString(9, client.getUserName());
+				rs.setString(10, client.getPassword());
+				rs.setString(3, client.getFirstName());
+				rs.setString(7, client.getLastName());
+				rs.setString(4, client.getMail());
+				rs.setString(5, client.getNumber());
+				rs.setString(8, client.getIndirizzo());
+				rs.setString(6, client.getNumIndirizzo());
+				rs.setString(2, client.getCap());
+				rs.setString(1, client.getCity());
 	            rs.executeUpdate();
 	        } catch (SQLException se) {
 	            se.printStackTrace();
@@ -96,14 +95,14 @@ public class ClientDao implements Closeable {
 		}
 	}
 
-	public Optional<Clients> get(String userName, String password) {
+	public Optional<Client> get(String userName, String password) {
 		try (Statement stmt = conn.createStatement(); //
 				PreparedStatement ps = conn.prepareStatement(CLIENTS)) {
 			ps.setString(1, userName);
 			ps.setString(2, password);
 			try (ResultSet rs = ps.executeQuery()) {
 				if (rs.next()) {
-					Clients my = new Clients(rs.getString(1), rs.getString(2));
+					Client my = new Client(rs.getString(1), rs.getString(2));
 					return Optional.of(my);
 				}
 			}
