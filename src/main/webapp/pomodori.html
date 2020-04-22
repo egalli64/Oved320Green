@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Products Page</title>
-<link rel="stylesheet" type="text/css" href="css/Page.css" />
-<script type="text/javascript" src="js/homePage.js" async="true"></script>
+<link rel="stylesheet" type="text/css" href="css/EachProduct.css" />
+<script type="text/javascript" src="js/EachProduct.js" async="true"></script>
 <!--inizio bootstrap -->
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -60,88 +60,119 @@
 			class="sr-only">Next</span>
 		</a>
 	</div>
+	<br>
+	<br>
+
+	<hr>
+	<hr>
+
+
+
+
+
+
+	<!-- Prodotti   -->
+
+	<h2 class="subTitleProd">Pomodori coltivati dai nostri agricoltori
+		felici</h2>
 
 	<br>
 	<br>
 
+	<hr>
+	<hr>
 
-	<!-- griglia prodotti-->
-
-	<div id="gridproducts" class="grigliaprodotti">
-		<h2 class="subTitleGreen">La nostra selezione di pasta, farine, legumi e
-			riso</h2>
-		<br> <br>
-
-		<hr>
-		<hr>
-		<p class="generalProd">Conosciuta in tutto il mondo, in Italia la
-			pasta non ha bisogno di presentazioni: è una di famiglia. Offriamo un’ampia selezione di pasta, dai formati classici alle
-			specialità regionali, prodotta artigianalmente in Italia con grani di
-			coltivazione nazionale, essiccazione lenta e a bassa temperatura. Non
-			mancano i prodotti “alternativi”, realizzati con farine senza
-			frumento e di legumi, per promuovere una cultura alimentare ricca e
-			inclusiva e venire incontro a chi desidera una pasta di qualità ma
-			deve escludere determinati ingredienti dalla propria dieta. Abbiamo aggiunto in questa sezione anche il riso, per garantire variabilità nella dieta. 
-		<p>
-		<hr>
-		<div class="container-fluid">
-
-			<!-- inserire link pagine prodotti -->
-			<div class="row">
-				<div class="col-1"></div>
-				<div class="col">
-					<a href="./orecchiette.html"><img src="./imgs/orecc.png"
-						width="70%" height="150" title="orecchiette" alt="orecchiette"></a>
-				</div>
-				<div class="col">
-					<a href="./riso.html"><img src="./imgs/riso.png"
-						width="70%" height="150" title="riso" alt="riso"></a>
-				</div>
-				<div class="col">
-					<a href="./integrale.html"><img src="./imgs/int.png" width="70%"
-						height="150" title="pasta" alt="pasta"></a>
-				</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col">
+				<p>
+					&nbsp;&nbsp; <img src="imgs/pomodoro.png" title="Half size"
+						width="80%"> <br> &nbsp;&nbsp;
+				<p class="generalProd" id="centered">
+					<svg class="bi bi-heart" width="1em" height="1em"
+						viewBox="0 0 16 16" fill="currentColor"
+						xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd"
+							d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 01.176-.17C12.72-3.042 23.333 4.867 8 15z"
+							clip-rule="evenodd" />
+</svg>
+					&nbsp; Aggiungi ai preferiti
+				</p>
 			</div>
-			<div class="row-1">
-				<br> <br>
+			<div class="col">
+				<h3 id="descrizione">Descrizione</h3>
+				<p class="generalProd">Coltivati con sistema tradizionale e nel rispetto dell'ambiente. è per questo che utilizziamo
+					acqua proveniente da impianti di trattamento avanzati, adatta per il riuso a
+					scopi irrigui. Ciò ci consente di risparmiare il 50% del consumo di
+					acqua.</p>
+				<p>
+				<hr>
+				Origine: Italia
+				<hr>
+				</p>
+				<p id="prezzo">1 &euro;/kg</p>
+				<br>
+				<p id="centered">
+					<button type="button" class="btn btn-success">
+						<svg class="bi bi-bucket" width="1em" height="1em"
+							viewBox="0 0 16 16" fill="currentColor"
+							xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd"
+								d="M8 1.5A4.5 4.5 0 003.5 6h-1a5.5 5.5 0 1111 0h-1A4.5 4.5 0 008 1.5z"
+								clip-rule="evenodd" />
+  <path fill-rule="evenodd"
+								d="M1.61 5.687A.5.5 0 012 5.5h12a.5.5 0 01.488.608l-1.826 8.217a1.5 1.5 0 01-1.464 1.175H4.802a1.5 1.5 0 01-1.464-1.175L1.512 6.108a.5.5 0 01.098-.42zm1.013.813l1.691 7.608a.5.5 0 00.488.392h6.396a.5.5 0 00.488-.392l1.69-7.608H2.624z"
+								clip-rule="evenodd" />
+</svg>
+						Aggiungi al carrello
+					</button>
+				</p>
 			</div>
-			<div class="row">
-				<div class="col-1"></div>
-				<div class="col">
-					<a href="./lenticchie.html"><img src="./imgs/lentils.jpg" width="70%"
-						height="150" title="lenticchie" alt="lenticchie"></a>
-				</div>
-				<div class="col">
-					<a href="./maccheroncinilupini.html"><img src="./imgs/maccheroncini di riso e lupini.jpg"
-						width="70%" height="150" title="maccheroncini" alt=""></a>
-				</div>
-				<div class="col">
-					<a href="./cavatelli.html"><img src="./imgs/cavatelli.jpg" width="70%"
-						height="150" title="latte" alt="latte"></a>
-				</div>
-			</div>
-			<div class="row-1">
-				<br> <br>
-			</div>
-
 
 		</div>
+		<div class="row">
+			<div class="col"></div>
 
+		</div>
 	</div>
-<hr> 
-<p class="introduzione"> Vedi tutti i <a href="./Products.html">prodotti</a></p>
-<hr>
-	<br>
-	<br>
-	<hr>
 
 
-	<!-- back to homepage -->
-	<!-- back to the top?? -->
-	<p class="generalText">
-		Torna alla <a href="./index.html" class="badge badge-success">Homepage</a>
-	</p>
 	<hr>
+	<div class="container-fluid">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th scope="col"></th>
+					<th scope="col" width="25%">TABELLA RIEPILOGATIVA <br>
+						Valori medi per 100 g di prodotto
+					</th>
+					<th scope="col" width="75%"></th>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">&nbsp;</th>
+					<td>Valori Nutrizionali</td>
+					<td>41 cal</td>
+
+				</tr>
+				<tr>
+					<th scope="row">&nbsp;</th>
+					<td>Impronta idrica</td>
+					<td>325 l/kg</td>
+
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<hr>
+
+	<div class="container-fluid">
+		<p>
+			&nbsp;&nbsp; Torna <a href="./Products.html">indietro</a>
+		</p>
+		<hr>
+	</div>
+
 	<!-- informazioni personali -->
 	<div class="row">
 		<div class="col-2"></div>
@@ -152,6 +183,7 @@
 		<div class="col-2">
 			<p class="personalInfo">
 				Seguici sul nostro <br>canale Facebook
+
 			</p>
 		</div>
 		<div class="col-0,5">
@@ -182,5 +214,6 @@
 	</div>
 	<hr>
 	<hr>
+
 </body>
 </html>
