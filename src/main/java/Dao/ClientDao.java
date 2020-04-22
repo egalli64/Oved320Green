@@ -57,16 +57,16 @@ public class ClientDao implements Closeable {
 	 public void newClient(Client client) {
 	        try (Statement stmt = conn.createStatement();
 	                PreparedStatement rs = conn.prepareStatement(NEWCLIENT)) {
-	        	rs.setString(9, client.getUserName());
-				rs.setString(10, client.getPassword());
+	        	rs.setString(1, client.getUserName());
+				rs.setString(2, client.getPassword());
 				rs.setString(3, client.getFirstName());
-				rs.setString(7, client.getLastName());
-				rs.setString(4, client.getMail());
-				rs.setString(5, client.getNumber());
-				rs.setString(8, client.getIndirizzo());
-				rs.setString(6, client.getNumIndirizzo());
-				rs.setString(2, client.getCap());
-				rs.setString(1, client.getCity());
+				rs.setString(4, client.getLastName());
+				rs.setString(5, client.getMail());
+				rs.setString(6, client.getNumber());
+				rs.setString(7, client.getIndirizzo());
+				rs.setString(8, client.getNumIndirizzo());
+				rs.setString(9, client.getCap());
+				rs.setString(10, client.getCity());
 	            rs.executeUpdate();
 	        } catch (SQLException se) {
 	            se.printStackTrace();

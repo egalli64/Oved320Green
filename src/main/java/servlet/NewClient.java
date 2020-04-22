@@ -23,7 +23,7 @@ public class NewClient extends HttpServlet {
 	private DataSource ds;
 
 	public NewClient() {
-		super();
+		super();	
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -40,7 +40,7 @@ public class NewClient extends HttpServlet {
 		String city = request.getParameter("city");
 
 		try (ClientDao dao = new ClientDao(ds)) {
-			Client us = new Client(userName,password,firstName, lastName, mail, numeroCell, indirizzo, num_indirizzo, cap, city);
+			Client us = new Client(firstName, lastName, indirizzo,num_indirizzo, cap, city, numeroCell, mail, userName, password);
 			dao.newClient(us);
 
 			RequestDispatcher rs = request.getRequestDispatcher("/Registrazione.jsp");
