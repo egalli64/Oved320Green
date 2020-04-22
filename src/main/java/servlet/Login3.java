@@ -20,40 +20,34 @@ import org.slf4j.LoggerFactory;
 
 import Dao.ClientDao;
 
-
 @WebServlet("/Login3")
 public class Login3 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
+
 	@Resource(name = "jdbc/green")
-    private DataSource ds;
-    
+	private DataSource ds;
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-    	
-    	String password = request.getParameter("psw");
-        String userName = request.getParameter("userName");
-        
-        try (ClientDao dao = new ClientDao(ds)) {		
-    		
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
-    		if (dao.get(userName, password).isPresent()) {
-    			HttpSession session = request.getSession();
-    			
-    			session.setAttribute("userName", userName);
-    			session.setAttribute("password", password);
-    			request.setAttribute("userName", userName);
-    			request.setAttribute("password", password);
+		String password = request.getParameter("psw");
+		String userName = request.getParameter("userName");
 
-    			
-                RequestDispatcher rd = request.getRequestDispatcher("LogIn.jsp");
-                rd.forward(request, response);
-    		} else {
-    			request.setAttribute("userName", userName);
-                RequestDispatcher rd = request.getRequestDispatcher("FailedLogIn.jsp"); 
-                rd.forward(request, response);
-    		}
-    		
-        }
-    }}
+		try (ClientDao dao = new ClientDao(ds)) {
+
+			if (dao.get(userName, password).isPresent()) {
+				HttpSession session = request.getSession();
+				session.setAttribute("userName", userName);
+				// session.setAttribute("password", password);
+				request.setAttribute("userName", userName);
+				RequestDispatcher rd = request.getRequestDispatcher("LogIn.jsp");
+				rd.forward(request, response);
+			} else {
+				request.setAttribute("userName", userName);
+				RequestDispatcher rd = request.getRequestDispatcher("FailedLogIn.jsp");
+				rd.forward(request, response);
+			}
+
+		}
+	}
+}
