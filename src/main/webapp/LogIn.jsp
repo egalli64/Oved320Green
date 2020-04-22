@@ -64,11 +64,12 @@
 <!-- fine aggiunta rispetto a pagina prodotti!!!!!!! -->
 
 
+
 <!-- griglia prodotti-->
 
 <div id="gridproducts" class="grigliaprodotti" >
 <h2 class="subTitleGreen">Scopri i nostri prodotti freschi e coltivati in modo sostenibile</h2>
-<br> 
+<br> <br>
 
 <hr> <hr>
 
@@ -76,22 +77,34 @@
 <div class="row">
 
 <div class="col-1"></div>
-<div class="col"><a href="./carote.html"><img src="./imgs/carote.png" width="70%" height="150" title="carrot" alt="Carote"></a></div>
+<div class="col"><a href="./carote.html"><img src="./imgs/carote.png" width="70%" height="150" title="carote" alt="Carote"></a></div>
 <div class="col"><a href="./uova.html"><img src="./imgs/uova.png" width="70%" height="150" title="uova" alt="uova"></a></div>
-<div class="col"><a href="./lenticchie.html"><img src="./imgs/lentils.jpg" width="70%" height="150"title="##" alt="lenticchie"></a></div>
+<div class="col"><a href="./lenticchie.html"><img src="./imgs/lentils.jpg" width="70%" height="150"title="lenticchie" alt="lenticchie"></a></div>
 </div>
 <div class="row-1"> <br> <br> </div>
-
+ <!-- inserire link pagine prodotti -->
 <div class="row">
 <div class="col-1"></div>
-<div class="col"><a href="./##"><img src="./imgs/carote.png" width="70%" height="150" title="White flower" alt="Flower"></a></div>
-<div class="col"><a href="./##"><img src="./imgs/carote.png" width="70%" height="150" title="White flower" alt="Flower"></a></div>
-<div class="col"><a href="./##"><img src="./imgs/carote.png" width="70%" height="150" title="White flower" alt="Flower"></a></div>
+<div class="col"><a href="./coffee.html"><img src="./imgs/coffee.png" width="70%" height="150" title="caffè" alt="caffè"></a></div>
+<div class="col"><a href="./mandorle.html"><img src="./imgs/mandorle.png" width="70%" height="150" title="pasta di mandorle" alt="Pasta di Mandorle"></a></div>
+<div class="col"><a href="./mele.html"><img src="./imgs/mele.png" width="70%" height="150" title="mele" alt="mele"></a></div>
+</div>
+<div class="row-1"> <br> <br> </div>
+<div class="row">
+<div class="col-1"></div>
+<div class="col"><a href="./pomodoro.html"><img src="./imgs/pomodoro.png" width="70%" height="150" title="pomodoro" alt="pomodoro"></a></div>
+<div class="col"><a href="./riso.html"><img src="./imgs/riso.png" width="70%" height="150" title="riso" alt="riso"></a></div>
+<div class="col"><a href="./biscotti.html"><img src="./imgs/biscotti.png" width="70%" height="150" title="biscotti" alt="biscotti"></a></div>
+</div>
+<div class="row-1"> <br> <br> </div>
+<div class="row">
+<div class="col-1"></div>
+<div class="col"><a href="./vino.html"><img src="./imgs/wine.png" width="70%" height="150" title="vino" alt="vino"></a></div>
+<div class="col"><a href="./orecchiette.html"><img src="./imgs/orecchiette.png" width="70%" height="150" title="orecchiette" alt="orecchiette"></a></div>
+<div class="col"><a href="./latte.html"><img src="./imgs/latte.png" width="70%" height="150" title="latte" alt="latte"></a></div>
 </div>
 </div>
-
-</div>
-
+<br> <br> 
 <hr> 
 
 
@@ -107,7 +120,6 @@
 				</div>
 				<div class="col-2">
 					<p class="personalInfo"> Seguici sul nostro <br>canale Facebook
-					
 					</p>
 				</div>
 				<div class="col-0,5">
