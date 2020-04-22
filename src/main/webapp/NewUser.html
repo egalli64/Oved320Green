@@ -7,26 +7,15 @@
 <script type="text/javascript" src="js/homePage.js" async="true"></script>
 <!--inizio bootstrap -->
 <link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-	crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-	integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-	crossorigin="anonymous"></script>
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 <script
-	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-	integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-	crossorigin="anonymous"></script>
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script
-	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-	crossorigin="anonymous"></script>
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <!--fine bootstrap -->
 </head>
 <body>
-
-
-
 	<!-- titolo -->
 	<p class="subTitleGreen">Green Taste</p>
 	<div class="generalText">
@@ -35,6 +24,7 @@
 	<hr>
 
 	<!-- inserimento dati -->
+
 	<div class="row">
 		<div class="col-1"></div>
 		<div class="col-12">
@@ -46,66 +36,126 @@
 
 
 	<form action="/green/NewClient" method="get">
-		<div class="row">
-			<div class="col-2"></div>
-			<div class="col-20">
-				<div>
+
+		<div class="container-fluid">
+			<div class="row">
+				<!-- username -->
+				<div class="col my1">
 					<label for="userName" class="data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						USERNAME: &nbsp; </label> <input type="text" name="userName"
-						placeholder="username" size="30">
+						USERNAME: &nbsp; </label>
 				</div>
-				<div>
-					<label for="psw" class="data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						PASSWORD: &nbsp; </label> <input type="password" name="psw"
-						placeholder="password" size="30">
-				</div>
-				<div>
-					<label for="firstName" class="data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						NOME: &nbsp; </label> <input type="text" name="firstName"
-						placeholder="Inserisci il tuo nome" size="30">
-				</div>
-				<div>
-					<label for="lastName" class="data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						COGNOME: &nbsp; </label> <input type="text" name="lastName"
-						placeholder="Inserisci il tuo cognome" size="30">
-				</div>
-				<div>
-					<label for=mail " class="data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						E-MAIL: &nbsp; </label> <input type="text" name="mail"
-						placeholder="Inserisci il tuo indirizzo e-mail" size="30">
-				</div>
-				<div>
-					<label for="numeroCell" class="data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						NUMERO: &nbsp; </label> <input type="text" name="numeroCell"
-						placeholder="Inserisci il tuo numero di telefono" size="30">
-				</div>
-				<div>
-					<label for="indirizzo" class="data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						INDIRIZZO: &nbsp; </label> <input type="text" name="indirizzo"
-						placeholder="Inserisci la via" size="30">
-				</div>
-				<div>
-					<label for="num_indirizzo" class="data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						n.: &nbsp; </label> <input type="text" name="num_indirizzo"
-						placeholder="Inserisci numero civico" size="30">
-				</div>
-				<div>
-					<label for="cap" class="data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						CAP: &nbsp; </label> <input type="text" name="cap"
-						placeholder="Inserisci CAP" size="30">
-				</div>
-				<div>
-					<label for="city" class="data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						CITTA': &nbsp; </label> <input type="text" name="city"
-						placeholder="Inserisci la tua città" size="30">
-				</div>
-				<div>
-					<button type="submit">Iscriviti</button>
+				<div class="col my2">
+					<input type="text" name="userName" placeholder="username" size="30"
+						required>
 				</div>
 			</div>
-		</div>
+			<div class="row">
+				<!-- password -->
+				<div class="col my1">
+					<label for="psw" class="data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						PASSWORD: &nbsp; </label>
+				</div>
+				<div class="col my2">
+					<input type="password" name="psw" placeholder="password" size="30"
+						required>
+				</div>
+			</div>
+			<div class="row">
+				<!-- nome -->
+				<div class="col my1">
+					<label for="firstName" class="data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						NOME: &nbsp; </label>
+				</div>
+				<div class="col my2">
+					<input type="text" name="firstName"
+						placeholder="Inserisci il tuo nome" size="30" required>
+				</div>
+			</div>
+			<div class="row">
+				<!-- cognome -->
+				<div class="col my1">
+					<label for="lastName" class="data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						COGNOME: &nbsp; </label>
+				</div>
+				<div class="col my2">
+					<input type="text" name="lastName"
+						placeholder="Inserisci il tuo cognome" size="30" required>
+				</div>
+			</div>
+			<div class="row">
+				<!-- email-->
+				<div class="col my1">
+					<label for="mail" class="data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						E-MAIL: &nbsp; </label>
+				</div>
+				<div class="col my2">
+					<input type="text" name="mail"
+						placeholder="Inserisci il tuo indirizzo e-mail" size="30" required>
+				</div>
+			</div>
+			<div class="row">
+				<!-- numero cell -->
+				<div class="col my1">
+					<label for="numeroCell" class="data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						NUMERO: &nbsp; </label>
+				</div>
+				<div class="col my2">
+					<input type="text" name="numeroCell"
+						placeholder="Inserisci il tuo numero di telefono" size="30"
+						required>
+				</div>
+			</div>
+			<div class="row">
+				<!-- address -->
+				<div class="col my1">
+					<label for="indirizzo" class="data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						INDIRIZZO: &nbsp; </label>
+				</div>
+				<div class="col my2">
+					<input type="text" name="indirizzo" placeholder="Inserisci la via"
+						size="30" required>
+				</div>
+			</div>
+			<div class="row">
+				<!-- num civico -->
+				<div class="col my1">
+					<label for="num_indirizzo" class="data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						n.: &nbsp; </label>
+				</div>
+				<div class="col my2">
+					<input type="text" name="num_indirizzo"
+						placeholder="Inserisci numero civico" size="30" required>
+				</div>
+			</div>
+			<div class="row">
+				<!-- cap -->
+				<div class="col my1">
+					<label for="cap" class="data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						CAP: &nbsp; </label>
+				</div>
+				<div class="col my2">
+					<input type="text" name="cap" placeholder="Inserisci CAP" size="30"
+						required>
+				</div>
+			</div>
+			<div class="row">
+				<!-- city -->
+				<div class="col my1">
+					<label for="city" class="data">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						CITTA': &nbsp; </label>
+				</div>
+				<div class="col my2">
+					<input type="text" name="city" placeholder="Inserisci la tua città"
+						size="30" required>
+				</div>
+			</div>
+			<div class="row">
+				<!-- button -->
+				<div class= "col my2">
+					<button type="submit">Invia</button>
+				</div>
+			</div>
 	</form>
-	<hr>
 	<!-- informazioni personali -->
 	<div class="row">
 		<div class="col-2"></div>
