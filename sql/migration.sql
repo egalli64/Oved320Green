@@ -1,41 +1,11 @@
 -- source this script from mySQL
 use green;
-
--- TABELLA INTERMEDIA PRODOTTI e ORDINI --
-drop table if exists intermedia;
-create table intermedia
-(
-
-order_id int,
-product_id int
-);
-
-insert into intermedia (order_id,product_id)  values ('1','2');
-insert into intermedia (order_id,product_id)  values ('2','7');
-
-
--- ORDERS -- 
 drop table if exists orders;
-
-create table orders
-(
-
-order_id integer primary key auto_increment,
--- order_date date,-- 
-client_id int 
-);
-
-
-insert into orders (order_id, client_id) values ('1','2');
-insert into orders (order_id, client_id) values ('2','3');
-insert into orders (order_id, client_id) values ('3','2');
-insert into orders (order_id, client_id) values ('4','5');
-insert into orders (order_id, client_id) values ('5','7');
-
-
+drop table if exists products;
+drop table if exists clients;
 
 -- ------    -------    ---------  PRODUCTS ------    -------    ---------  -- 
-drop table if exists products;
+
 create table products
 (
 
@@ -44,7 +14,6 @@ product_name varchar(50) not null,
 price_money decimal(6,2) not null
 );
 
-select * from products;
 insert into products (product_id,product_name, price_money) 
 values ('1','Scaldatelli','2.50');
 insert into products (product_id,product_name, price_money) 
@@ -145,9 +114,12 @@ insert products (product_id,product_name,price_money)
 values ('49','Mix Farina Riso Rosso','3.60');
 insert products (product_id,product_name,price_money)
 values ('50','Pasta Madre essiccata di Frumento','13.00');
+
+
+
 -- -------   ---------      CLIENTS      ------    -------    ---------     ------------ 
 
-drop table if exists clients;
+
 create table clients(
 	client_id integer primary key auto_increment, 
     username varchar(25) unique not null,
@@ -217,5 +189,26 @@ insert into clients (client_id, username, psw, first_name, last_name, email, pho
 insert into clients (client_id, username, psw, first_name, last_name, email, phone_number, address, n_address,CAP, city) values ('153','colsen','abc123','Christopher','Olsen','COLSEN','011.44.1344.498718','Via Flavia','81','00187','Roma');
 insert into clients (client_id, username, psw, first_name, last_name, email, phone_number, address, n_address,CAP, city) values ('154','ncambrau','abc123','Nanette','Cambrault','NCAMBRAU','011.44.1344.987668', 'Via Belisario','102','00187','Roma');
 
+-- ORDERS -- 
 
+
+create table orders
+(
+
+order_id integer,  -- non è una pk 
+-- order_date date,-- 
+client_id int ,
+foreign key (client_id) references clients(client_id),
+product_id int ,
+foreign key (product_id) references products(product_id)
+ );
+-- product id e client id possono ripetersi e così lo stesso cliente può acquistare più cose 
+
+insert into orders (order_id, client_id, product_id) values ('1','2','1');  
+insert into orders (order_id, client_id, product_id) values ('2','3','1');
+insert into orders (order_id, client_id, product_id) values ('3','2', '1');
+insert into orders (order_id, client_id, product_id) values ('3','2', '2');
+insert into orders (order_id, client_id, product_id) values ('5','2', '3');
+insert into orders (order_id, client_id, product_id) values ('6','5','3');
+insert into orders (order_id, client_id, product_id) values ('7','7','2');
 commit;
