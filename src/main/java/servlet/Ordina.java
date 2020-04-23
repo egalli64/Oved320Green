@@ -13,6 +13,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import Dao.Client;
+import Dao.ClientDao;
+import Dao.Order;
 import Dao.ProductDao;
 import antlr.collections.List;
 
@@ -48,18 +51,30 @@ public class Ordina extends HttpServlet {
 		} else {
 			try (ProductDao dao = new ProductDao(ds)) {
 				@SuppressWarnings("unchecked")
-				ArrayList<Integer> lista = (ArrayList<Integer>) session.getAttribute("carrello");
+				ArrayList<Order> lista = (ArrayList<Order>) session.getAttribute("ProductList");
 				if (lista == null) {
 					RequestDispatcher rd = getServletContext().getRequestDispatcher("/Ordina.jsp");
 					request.setAttribute("message", "Non hai ancora scelto nessun prodotto!");
 					rd.forward(request, response);
 				} else {
-					request.setAttribute("acquisti", lista);
+					
+					String [] array =new String [lista.size()];
+					 int i=0;
+					 
+					 for (Order elem : lista) {
+					 
+					 array[i]=elem.getProductName();
+					 i++;
+					 }
+					
+					request.setAttribute("acquisti", array.toString());
 					request.setAttribute("message", "Complimenti! il tuo ordine è stato inoltrato correttamente. ");
 					RequestDispatcher rd = getServletContext().getRequestDispatcher("/Ordina.jsp");
 					rd.forward(request, response);
 					
 				}
+
+				
 
 			}
 		}

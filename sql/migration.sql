@@ -198,7 +198,7 @@ insert into clients (client_id, username, psw, first_name, last_name, email, pho
 create table orders
 (
 product_name varchar(50),
-price double(5,2),
+price decimal(5,2),
 quantity  int
  );
 

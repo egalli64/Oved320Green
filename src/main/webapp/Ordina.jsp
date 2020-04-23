@@ -8,7 +8,7 @@
 </head>
 <body>
 <p>
-LISTA: ${acquisti}
+LISTA: ${acquisti} <br>
 MEX: ${message}
 
 </p>

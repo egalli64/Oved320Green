@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
 
 import Dao.Order;
+import Dao.OrderDao;
 import Dao.Product;
 
 import java.io.IOException;
@@ -60,9 +61,12 @@ public class AddCarrello extends HttpServlet {
                     lista = new ArrayList<Order>();
                 }
 //                int quantity = (int) request.getAttribute("quantity");
-                Order item = new Order( request.getParameter("Product").toString());
+                //Order item = new Order( request.getParameter("Product").toString());
+                try (OrderDao dao = new OrderDao(ds)) {
+        				Order item = new Order( request.getParameter("Product").toString());
+        				dao.newOrder(item);
                 lista.add(item);
-                session.setAttribute("Product", lista);
+                session.setAttribute("ProductList", lista);
                 RequestDispatcher rdv = getServletContext().getRequestDispatcher("/Aggiunto.jsp");
                 request.setAttribute("message", "Prodotto aggiunto al carrello");
                 request.setAttribute("Product", item.getProductName());
@@ -73,8 +77,16 @@ public class AddCarrello extends HttpServlet {
 				request.setAttribute("message", "Spiacente, qualcosa è andato storto nel tuo carrello!");
 				rd.forward(request, response);
 			}
-		}
+		}}
 	}
+	
+			//	try (OrderDao dao = new OrderDao(ds)) {
+			//	Order or = new Order( request.getParameter("Product").toString());
+			//	dao.newOrder(or);
+			//
+			//	RequestDispatcher rs = request.getRequestDispatcher("/Registrazione.jsp");
+			//	rs.forward(request, response);
+			//}
 
 	/**
 	 * @see HttpServlet#HttpServlet()
