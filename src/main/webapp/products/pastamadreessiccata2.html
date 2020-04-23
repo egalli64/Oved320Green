@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MyGreenPage</title>
+<link rel="stylesheet" type="text/css" href="css/Page.css" />
+<script type="text/javascript" src="js/homePage.js" async="true"></script>
+<!--inizio bootstrap -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<!--fine bootstrap -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-mr sticky-top navbar-light bg-light">
+		<a class="navbar-brand" href="index.html"><img
+			src="img-Index/home.png" width=5%></a>
+			<h1 class="MainTitleGreen" id="top">Green Taste</h1>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="nav-item" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active"><a class="nav-link"
+					href="presentazione.html">Chi siamo</a></li>
+				<span class="sr-only">(current)</span>
+				</a>
+				<li class="nav-item dropdown active"><a
+					class="nav-link dropdown-toggle" href="Products.html"
+					id="navbarDropdown" role="button" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false"> Prodotti </a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="./products/colazione.html">Dolci
+							e colazione</a> <a class="dropdown-item"
+							href="./products/verdura.html">Frutta e verdura</a><a
+							class="dropdown-item" href="./products/paste.html">Pasta,
+							farine, legumi</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="Products.html">Tutti i prodotti</a>
+					</div></li>
+				<li class="nav-item dropdown active"><a
+					class="nav-link dropdown-toggle" href="accedi.html"
+					id="navbarDropdown" role="button" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="true">Utente</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="accedi.html">Accedi</a> <a
+							class="dropdown-item" href="Registrazione.html">Registrati</a>
+					</div></li>
+					<a class="navbar-brand" href="carrello.html"><img
+			src="img-Index/smart-cart.png" width=5%></a>
+			</ul> 
+	</nav>
+
+	<!-- Prodotti   -->
+
+	<h2 class="subTitleProd">Pasta Madre essiccata di Frumento"</h2>
+
+	<br>
+	<br>
+
+	<hr>
+	<hr>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col">
+				<p>
+		<!--	QUI URL IMMAGINE dentro src -->	
+				&nbsp;&nbsp; <img src="../imgs/essiccata2.jpg" title="Half size"
+						width="80%"> <br> &nbsp;&nbsp;
+				<p class="generalProd" id="centered">
+					<svg class="bi bi-heart" width="1em" height="1em"
+						viewBox="0 0 16 16" fill="currentColor"
+						xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd"
+							d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 01.176-.17C12.72-3.042 23.333 4.867 8 15z"
+							clip-rule="evenodd" />
+</svg>
+					&nbsp; Aggiungi ai preferiti
+				</p>
+			</div>
+			<div class="col">
+				<h3 id="descrizione">Descrizione</h3>
+				<p class="generalProd">I lieviti di pasta madre sono ottenuti
+					attraverso una fermentazione di 50 giorni, prima di essere
+					essiccati e confezionati. Il lievito di pasta madre essiccato
+					liofilizzato contiene una piccolissima percentuale di lievito
+					secco, che serve da starter, per farlo partire. Il risultato, nella
+					lievitazione, sarà una fermentazione di tipo lattico (madre) per la
+					maggioranza dei microrganismi, e per una piccola percentuale di
+					essi di tipo acetico. Adatto alla produzione di pane, dolci
+					lievitati, pizza, focacce, con i vantaggi di maggior durata del
+					prodotto e profumo più deciso e intenso rispetto al lievito secco. </p>
+				<br>
+				<p>
+					 <br>
+				</p>
+				
+		<!--PREZZO -->		
+		
+		<p id="prezzo">13.00 &euro;/kg</p>
+				<br>
+				<p id="centered">
+					<button type="button" class="btn btn-success">
+						<svg class="bi bi-bucket" width="1em" height="1em"
+							viewBox="0 0 16 16" fill="currentColor"
+							xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd"
+								d="M8 1.5A4.5 4.5 0 003.5 6h-1a5.5 5.5 0 1111 0h-1A4.5 4.5 0 008 1.5z"
+								clip-rule="evenodd" />
+  <path fill-rule="evenodd"
+								d="M1.61 5.687A.5.5 0 012 5.5h12a.5.5 0 01.488.608l-1.826 8.217a1.5 1.5 0 01-1.464 1.175H4.802a1.5 1.5 0 01-1.464-1.175L1.512 6.108a.5.5 0 01.098-.42zm1.013.813l1.691 7.608a.5.5 0 00.488.392h6.396a.5.5 0 00.488-.392l1.69-7.608H2.624z"
+								clip-rule="evenodd" />
+</svg>
+						Aggiungi al carrello
+					</button>
+				</p>
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="col"></div>
+
+		</div>
+	</div>
+
+
+	<hr>
+	<div class="container-fluid">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th scope="col"></th>
+					<th scope="col" width="25%">TABELLA RIEPILOGATIVA <br>
+						Valori medi per 100 g di prodotto
+					</th>
+					<th scope="col" width="75%"></th>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">&nbsp;</th>
+					<td>Valori Nutrizionali</td>
+					<td>1651KJ -389kcal</td>
+
+				</tr>
+				<tr>
+					<th scope="row">&nbsp;</th>
+					<td>Impronta idrica</td>
+					<td>135 l/kg</td>
+
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<hr>
+
+	<div class="container-fluid">
+		<p>
+			&nbsp;&nbsp; Torna <a href="../Products.html">indietro</a>
+		</p>
+		<hr>
+	</div>
+
+	<!-- informazioni personali -->
+	<div class="row">
+		<div class="col-2"></div>
+		<div class="col-0,5">
+			<img
+				src="https://img.icons8.com/material-outlined/60/000000/facebook.png" />
+		</div>
+		<div class="col-2">
+			<p class="personalInfo">
+				Seguici sul nostro <br>canale Facebook
+
+			</p>
+		</div>
+		<div class="col-0,5">
+			<img src="https://img.icons8.com/ios-glyphs/48/000000/iphone.png" />
+		</div>
+		<div class="col-2">
+			<p class="personalInfo">
+				Chiamaci: <br> +39 0395049892
+			</p>
+		</div>
+		<div class="col-0,5">
+			<img src="https://img.icons8.com/ios-glyphs/48/000000/gmail.png" />
+		</div>
+		<div class="col-2">
+			<p class="personalInfo">
+				E-mail: <br> greentaste@gmail.com
+			</p>
+		</div>
+		<div class="col-0,5">
+			<img
+				src="https://img.icons8.com/material/48/000000/order-delivered.png" />
+		</div>
+		<div class="col-2">
+			<p class="personalInfo">
+				Dove siamo: <br> Via da definire
+			</p>
+		</div>
+	</div>
+	<hr>
+	<hr>
+
+</body>
+</html>
