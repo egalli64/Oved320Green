@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
 
+import Dao.Order;
 import Dao.Product;
 
 import java.io.IOException;
@@ -38,18 +39,34 @@ public class AddCarrello extends HttpServlet {
 			rd.forward(request, response);
 		} else {
 			try {
+//				@SuppressWarnings("unchecked")
+//				// creiamo una lista con i prodotti
+//				List<Product> lista = (List<Product>) session.getAttribute("Product");
+//				if (lista == null) {
+//					lista = new ArrayList<Product>();
+//				}
+//				Order ord = new Order( session.getAttribute("Product").toString(), 0) ;
+//				lista.add(ord);
+//				session.setAttribute("carrello", lista);
+//				RequestDispatcher rdv = getServletContext().getRequestDispatcher("/Aggiunto.jsp");
+//				request.setAttribute("message", "Il tuo articolo è stato aggiunto con successo!");
+//				rdv.forward(request, response);
+				
+				
+				
 				@SuppressWarnings("unchecked")
-				// creiamo una lista con i prodotti
-				List<Product> lista = (List<Product>) session.getAttribute("carrello");
-				if (lista == null) {
-					lista = new ArrayList<Product>();
-				}
-				Product prod = (Product) session.getAttribute("Product");
-				lista.add(prod);
-				session.setAttribute("carrello", lista);
-				RequestDispatcher rdv = getServletContext().getRequestDispatcher("/Aggiunto.jsp");
-				request.setAttribute("message", "Il tuo articolo è stato aggiunto con successo!");
-				rdv.forward(request, response);
+                List<Order> lista = (List<Order>) session.getAttribute("Product");
+                if (lista == null) {
+                    lista = new ArrayList<Order>();
+                }
+//                int quantity = (int) request.getAttribute("quantity");
+                Order item = new Order( request.getParameter("Product").toString());
+                lista.add(item);
+                session.setAttribute("Product", lista);
+                RequestDispatcher rdv = getServletContext().getRequestDispatcher("/Aggiunto.jsp");
+                request.setAttribute("message", "Prodotto aggiunto al carrello");
+                request.setAttribute("Product", item.getProductName());
+                rdv.forward(request, response);
 
 			} catch (Exception e) {
 				RequestDispatcher rd = getServletContext().getRequestDispatcher("/Aggiunto.jsp");

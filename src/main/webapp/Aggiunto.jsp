@@ -8,7 +8,9 @@
 </head>
 <body>
 
-<p> MEX: ${message} <p>
+<p> MEX: ${message} 
+	${Product}
+<p>
 
 </body>
 </html>
