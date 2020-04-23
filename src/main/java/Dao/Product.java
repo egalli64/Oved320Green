@@ -6,6 +6,9 @@ public class Product {
 	private String productName;
 	private double price;
 	
+	public Product() {
+		
+	}
 	
 	public Product(int productId,String productName, double price) {
 		super();
