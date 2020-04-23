@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.activation.DataSource;
 import javax.annotation.Resource;
@@ -23,7 +24,7 @@ public class Ordina extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     
 	@Resource(name = "jdbc/green")
-	private DataSource ds;
+	private javax.sql.DataSource ds;
 	
     /**
      * @see HttpServlet#HttpServlet()
@@ -47,18 +48,15 @@ public class Ordina extends HttpServlet {
 		} else {
 			try (ProductDao dao = new ProductDao(ds)) {
 				@SuppressWarnings("unchecked")
-				List<Integer> lista = (List<Integer>) session.getAttribute("carrello");
+				ArrayList<Integer> lista = (ArrayList<Integer>) session.getAttribute("carrello");
 				if (lista == null) {
-					RequestDispatcher rd = getServletContext().getRequestDispatcher("/Carrello.jsp");
-					request.setAttribute("error", "Non ci sono vini nel carrello");
+					RequestDispatcher rd = getServletContext().getRequestDispatcher("/Ordina.jsp");
+					request.setAttribute("message", "Non hai ancora scelto nessun prodotto!");
 					rd.forward(request, response);
 				} else {
-//					List<Vino> carrello = new ArrayList<>();
-//					for (int item : lista) {
-//						carrello.add(dao.get(item).get());
-//					}
 					request.setAttribute("acquisti", lista);
-					RequestDispatcher rd = getServletContext().getRequestDispatcher("/Carrello.jsp");
+					request.setAttribute("message", "Complimenti! il tuo ordine è stato inoltrato correttamente. ");
+					RequestDispatcher rd = getServletContext().getRequestDispatcher("/Ordina.jsp");
 					rd.forward(request, response);
 					
 				}

@@ -25,11 +25,11 @@ public class ProductDao implements Closeable{
 	
 
 	
-	public ProductDao(javax.activation.DataSource ds) {
+	public ProductDao(DataSource ds) {
 		logger.trace("called");
 
 		try {
-			this.conn = ds.getConnection();
+			this.conn =  ds.getConnection();
 		} catch (SQLException se) {
 			throw new IllegalStateException("Database issue " + se.getMessage());
 		}

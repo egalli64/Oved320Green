@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+<p>
+LISTA: ${acquisti}
+MEX: ${message}
 
+</p>
 </body>
 </html>
