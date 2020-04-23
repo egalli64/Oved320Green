@@ -22,7 +22,7 @@ import java.util.Optional;
 /**
  * Servlet implementation class AddCarrello
  */
-@WebServlet("/green/AddCarrello")
+@WebServlet("/AddCarrello")
 public class AddCarrello extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

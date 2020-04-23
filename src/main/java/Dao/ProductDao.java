@@ -18,7 +18,7 @@ public class ProductDao implements Closeable{
 
 	//static final String CLIENTS = "SELECT username, psw FROM clients WHERE username=? and psw=?";
 	//static final String NEWCLIENT = "INSERT INTO clients (username, psw, first_name, last_name, email, phone_number, address, n_address,CAP, city) values (?,?,?,?,?,?,?,?,?,?)";
-	static final String INSERT_DATA_SQL = "";
+	static final String INSERT_ORDER = "INSERT into orders(product_name, price)";
 	
 	private static final Logger logger = LoggerFactory.getLogger(ClientDao.class);
 	private Connection conn;
@@ -46,13 +46,11 @@ public class ProductDao implements Closeable{
 	
 	
 	
-	public void insertData(int acquisto_id, int utente_id, int prodotto_id, double data_e_ora) {
+	public void insertData(String product_name, double price) {
 		try (Statement stmt = conn.createStatement(); //
-				PreparedStatement ps = conn.prepareStatement(INSERT_DATA_SQL)) {
-			ps.setInt(1, acquisto_id);
-			ps.setInt(2, utente_id);
-			ps.setInt(3, prodotto_id);
-			ps.setDouble(4, data_e_ora);
+				PreparedStatement ps = conn.prepareStatement(INSERT_ORDER)) {
+			ps.setString(1, product_name);
+			ps.setDouble(2, price);
 
 		} catch (SQLException se) {
 			se.printStackTrace();
