@@ -23,7 +23,7 @@
 .subTitleGreen {
 	color: #22d226;
 	font-family: 'Lucida Calligraphy';
-    font-size: 60px;
+    font-size: 30px;
     text-align: center;
 }
 
@@ -42,4 +42,9 @@ color: #22d226;
     font-size: 30px;
     
 	
+}
+
+.carrello {
+	font: 20px Arial, sans-serif;
+	text-align: center;
 }
