@@ -109,7 +109,8 @@
 				<br>
 				<form action="/green/AddCarrello">
 				<p id="centered">
-					<button type="button" class="btn btn-success">
+					<input type="hidden" name="Product" value="bacche di golgi" size="30" required>
+					<button type="submit" class="btn btn-success">
 						<svg class="bi bi-bucket" width="1em" height="1em"
 							viewBox="0 0 16 16" fill="currentColor"
 							xmlns="http://www.w3.org/2000/svg">
@@ -164,9 +165,8 @@
 	<hr>
 
 	<div class="container-fluid">
-		<p>
-			&nbsp;&nbsp; Torna <a href="../Products.html">indietro</a>
-		</p>
+		
+		<a href="javascript:history.go(-1)" onMouseOver="self.status=document.referrer; return true">Torna indietro</a>
 		<hr>
 	</div>
 
