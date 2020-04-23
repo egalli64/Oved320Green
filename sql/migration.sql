@@ -197,21 +197,9 @@ insert into clients (client_id, username, psw, first_name, last_name, email, pho
 
 create table orders
 (
-
-order_id integer,  -- non è una pk 
--- order_date date,-- 
-client_id int ,
-foreign key (client_id) references clients(client_id),
-product_id int ,
-foreign key (product_id) references products(product_id)
+product_name varchar(50),
+price_money varchar(50) 
  );
--- product id e client id possono ripetersi e così lo stesso cliente può acquistare più cose 
 
-insert into orders (order_id, client_id, product_id) values ('1','2','1');  
-insert into orders (order_id, client_id, product_id) values ('2','3','1');
-insert into orders (order_id, client_id, product_id) values ('3','2', '1');
-insert into orders (order_id, client_id, product_id) values ('3','2', '2');
-insert into orders (order_id, client_id, product_id) values ('5','2', '3');
-insert into orders (order_id, client_id, product_id) values ('6','5','3');
-insert into orders (order_id, client_id, product_id) values ('7','7','2');
+
 commit;
