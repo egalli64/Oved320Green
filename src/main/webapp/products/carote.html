@@ -2,75 +2,62 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Products Page</title>
-<link rel="stylesheet" type="text/css" href="../css/EachProduct.css" />
-<script type="text/javascript" src="../js/EachProduct.js" async="true"></script>
+<title>MyGreenPage</title>
+<link rel="stylesheet" type="text/css" href="css/Page.css" />
+<script type="text/javascript" src="js/homePage.js" async="true"></script>
 <!--inizio bootstrap -->
 <link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-	crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-	integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-	crossorigin="anonymous"></script>
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 <script
-	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-	integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-	crossorigin="anonymous"></script>
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script
-	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-	crossorigin="anonymous"></script>
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <!--fine bootstrap -->
 </head>
+
 <body>
-
-	<!-- titolo -->
-	<h1 class="MainTitleGreen">Green Taste</h1>
-
-
-	<!-- carosello immagini cibo -->
-
-	<div id="carouselExampleIndicators" class="carousel slide"
-		data-ride="carousel">
-		<ol class="carousel-indicators">
-			<li data-target="#carouselExampleIndicators" data-slide-to="0"
-				class="active"></li>
-			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-		</ol>
-		<div class="carousel-inner">
-			<div class="carousel-item active">
-				<img src="../imgs/veg.jpg" class="d-block w-100" alt="...">
-			</div>
-			<div class="carousel-item">
-				<img src="../imgs/veg4.jpg" class="d-block w-100" alt="...">
-			</div>
-			<div class="carousel-item">
-				<img src="../imgs/pasta.png" class="d-block w-100" alt="...">
-			</div>
-		</div>
-		<a class="carousel-control-prev" href="#carouselExampleIndicators"
-			role="button" data-slide="prev"> <span
-			class="carousel-control-prev-icon" aria-hidden="true"></span> <span
-			class="sr-only">Previous</span>
-		</a> <a class="carousel-control-next" href="#carouselExampleIndicators"
-			role="button" data-slide="next"> <span
-			class="carousel-control-next-icon" aria-hidden="true"></span> <span
-			class="sr-only">Next</span>
-		</a>
-	</div>
-	<br>
-	<br>
-
-	<hr>
-	<hr>
-
-
-
-
-
-
+	<nav class="navbar navbar-expand-mr sticky-top navbar-light bg-light">
+		<a class="navbar-brand" href="index.html"><img
+			src="img-Index/home.png" width=5%></a>
+		<h1 class="MainTitleGreen" id="top">Green Taste</h1>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="nav-item" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active"><a class="nav-link"
+					href="presentazione.html">Chi siamo</a></li>
+				<span class="sr-only">(current)</span>
+				</a>
+				<li class="nav-item dropdown active"><a
+					class="nav-link dropdown-toggle" href="Products.html"
+					id="navbarDropdown" role="button" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false"> Prodotti </a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="./products/colazione.html">Dolci
+							e colazione</a> <a class="dropdown-item"
+							href="./products/verdura.html">Frutta e verdura</a><a
+							class="dropdown-item" href="./products/paste.html">Pasta,
+							farine, legumi</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="Products.html">Tutti i prodotti</a>
+					</div></li>
+				<li class="nav-item dropdown active"><a
+					class="nav-link dropdown-toggle" href="accedi.html"
+					id="navbarDropdown" role="button" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="true">Utente</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="accedi.html">Accedi</a> <a
+							class="dropdown-item" href="Registrazione.html">Registrati</a>
+					</div></li>
+				<a class="navbar-brand" href="carrello.html"><img
+					src="img-Index/smart-cart.png" width=5%></a>
+			</ul>
+	</nav>
 	<!-- Prodotti   -->
 
 	<h2 class="subTitleProd">Carote coltivate dai nostri agricoltori
@@ -101,35 +88,39 @@
 			</div>
 			<div class="col">
 				<h3 id="descrizione">Descrizione</h3>
-				<p class="generalProd" >Le nostre carote sono coltivate con
+				<p class="generalProd">Le nostre carote sono coltivate con
 					sistema tradizionale e senza pesticidi, nel rispetto dell'ambiente.
 					Prodotto di alta qualità dal sapore unico.Le carote provengono, in
 					base al periodo, da zone diverse della regione. La grande varietà
 					di microclimi che caratterizza il nostro territorio ci consente di
 					avere molti prodotti disponibili per gran parte dell'anno.</p>
-				<p> <hr>
-					Origine: Italia <hr>
+				<p>
+				<hr>
+				Origine: Italia
+				<hr>
 				</p>
 				<p id="prezzo">1.50 &euro;/kg</p>
 				<br>
 				<form action="/green/AddCarrello">
-				<p id="centered"> 
-					<input type="hidden" name="Product" value="carote" size="30" required>
-					<button type="submit" class="btn btn-success">
-						<svg class="bi bi-bucket" width="1em" height="1em"
-							viewBox="0 0 16 16" fill="currentColor"
-							xmlns="http://www.w3.org/2000/svg">
+					<p id="centered">
+						<input type="hidden" name="Product" value="carote" size="30"
+							required>
+						<button type="submit" class="btn btn-success">
+							<svg class="bi bi-bucket" width="1em" height="1em"
+								viewBox="0 0 16 16" fill="currentColor"
+								xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd"
-								d="M8 1.5A4.5 4.5 0 003.5 6h-1a5.5 5.5 0 1111 0h-1A4.5 4.5 0 008 1.5z"
-								clip-rule="evenodd" />
+									d="M8 1.5A4.5 4.5 0 003.5 6h-1a5.5 5.5 0 1111 0h-1A4.5 4.5 0 008 1.5z"
+									clip-rule="evenodd" />
   <path fill-rule="evenodd"
-								d="M1.61 5.687A.5.5 0 012 5.5h12a.5.5 0 01.488.608l-1.826 8.217a1.5 1.5 0 01-1.464 1.175H4.802a1.5 1.5 0 01-1.464-1.175L1.512 6.108a.5.5 0 01.098-.42zm1.013.813l1.691 7.608a.5.5 0 00.488.392h6.396a.5.5 0 00.488-.392l1.69-7.608H2.624z"
-								clip-rule="evenodd" />
+									d="M1.61 5.687A.5.5 0 012 5.5h12a.5.5 0 01.488.608l-1.826 8.217a1.5 1.5 0 01-1.464 1.175H4.802a1.5 1.5 0 01-1.464-1.175L1.512 6.108a.5.5 0 01.098-.42zm1.013.813l1.691 7.608a.5.5 0 00.488.392h6.396a.5.5 0 00.488-.392l1.69-7.608H2.624z"
+									clip-rule="evenodd" />
 </svg>
-						Aggiungi al carrello
-					</button>
-				</p></form>
-				
+							Aggiungi al carrello
+						</button>
+					</p>
+				</form>
+
 			</div>
 
 		</div>

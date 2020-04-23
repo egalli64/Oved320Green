@@ -14,7 +14,7 @@
 }
 
 .introduzione {
-	font: 30px Arial, sans-serif;
+	font: 25px Arial, sans-serif;
     text-align: center;
     line-height: 150%;
     
@@ -23,7 +23,7 @@
 .subTitleGreen {
 	color: #22d226;
 	font-family: 'Lucida Calligraphy';
-    font-size: 30px;
+    font-size: 60px;
     text-align: center;
 }
 
@@ -39,7 +39,7 @@
 .figure {
 color: #22d226;
 	font-family: 'Lucida Calligraphy';
-    font-size: 30px;
+    font-size: 25px;
     
 	
 }

@@ -17,63 +17,48 @@
 </head>
 
 <body>
-	<nav class="navbar sticky-top navbar-light"
-		style="background-color: #74e977;">
-		<!-- Navbar content -->
-		<a class="navbar-brand 1" href="index.html"><img
-			src="img-Index/home.png" width=5%></a> <a class="navbar-brand 2"
-			href="Products.html"><img src="img-Index/buy.png" width=5%>Prodotti</a>
-		<a class="navbar-brand 3" href="accedi.html"><img
-			src="img-Index/user.png" width=5%>Accedi</a> <a
-			class="navbar-brand 4" href="Registrazione.html"><img
-			src="img-Index/newuser.png" width=5%>Registati</a>
-			
-		<!-- NON RIESCO A METTERE I LINK, ANCHE CON IL FORM
-			<a class="navbar-brand">
-			<select name="prodotti">
-				<option value="Products.html">Prodotti</option>
-				<option value="categories.html">Categorie</option>
-		</select></a> <a class="navbar-brand"> <select name="User">
-				<option value="">Accedi</option>
-				<option value="Registrazione.html">Registrati</option>
-		</select></a> -->
+	<nav class="navbar navbar-expand-mr sticky-top navbar-light bg-light">
+		<a class="navbar-brand" href="index.html"><img
+			src="img-Index/home.png" width=5%></a>
+			<h1 class="MainTitleGreen" id="top">Green Taste</h1>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="nav-item" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active"><a class="nav-link"
+					href="presentazione.html">Chi siamo</a></li>
+				<span class="sr-only">(current)</span>
+				</a>
+				<li class="nav-item dropdown active"><a
+					class="nav-link dropdown-toggle" href="Products.html"
+					id="navbarDropdown" role="button" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false"> Prodotti </a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="./products/colazione.html">Dolci
+							e colazione</a> <a class="dropdown-item"
+							href="./products/verdura.html">Frutta e verdura</a><a
+							class="dropdown-item" href="./products/paste.html">Pasta,
+							farine, legumi</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="Products.html">Tutti i prodotti</a>
+					</div></li>
+				<li class="nav-item dropdown active"><a
+					class="nav-link dropdown-toggle" href="accedi.html"
+					id="navbarDropdown" role="button" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="true">Utente</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="accedi.html">Accedi</a> <a
+							class="dropdown-item" href="Registrazione.html">Registrati</a>
+					</div></li>
+					<a class="navbar-brand" href="carrello.html"><img
+			src="img-Index/smart-cart.png" width=5%></a>
+			</ul> 
 	</nav>
 
-	<!-- titolo -->
-	<h1 class="MainTitleGreen" id="top">Green Taste</h1>
-	
-	
-	<!-- carosello immagini cibo -->
-
-	<div id="carouselExampleIndicators" class="carousel slide"
-		data-ride="carousel">
-		<ol class="carousel-indicators">
-			<li data-target="#carouselExampleIndicators" data-slide-to="0"
-				class="active"></li>
-			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-		</ol>
-		<div class="carousel-inner">
-			<div class="carousel-item active">
-				<img src="imgs/veg.jpg" width=50% class="d-block w-100" alt="...">
-			</div>
-			<div class="carousel-item">
-				<img src="imgs/veg4.jpg" width=50% class="d-block w-100" alt="...">
-			</div>
-			<div class="carousel-item">
-				<img src="imgs/pasta.png" width=50% class="d-block w-100" alt="...">
-			</div>
-		</div>
-		<a class="carousel-control-prev" href="#carouselExampleIndicators"
-			role="button" data-slide="prev"> <span
-			class="carousel-control-prev-icon" aria-hidden="true"></span> <span
-			class="sr-only">Previous</span>
-		</a> <a class="carousel-control-next" href="#carouselExampleIndicators"
-			role="button" data-slide="next"> <span
-			class="carousel-control-next-icon" aria-hidden="true"></span> <span
-			class="sr-only">Next</span>
-		</a>
-	</div>
 	
 	<p class="Citazioni" id="frase">“Il mondo è un bel posto e per esso
 		vale la pena di lottare.”
