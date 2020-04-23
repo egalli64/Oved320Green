@@ -11,110 +11,110 @@ create table products
 
 product_id int primary key not null,
 product_name varchar(50) not null,
-price_money decimal(6,2) not null
+price decimal(6,2) not null
 );
 
-insert into products (product_id,product_name, price_money) 
+insert into products (product_id,product_name, price) 
 values ('1','Scaldatelli','2.50'); -- ok 
-insert into products (product_id,product_name, price_money) 
+insert into products (product_id,product_name, price) 
 values ('2', 'Biscotti', '3.00'); -- ok
-insert into products (product_id,product_name,price_money) 
+insert into products (product_id,product_name,price) 
 values ('3', ' Uova', '2.00'); -- ok
-insert into products (product_id,product_name,price_money)  
+insert into products (product_id,product_name,price)  
 values ('4', 'Carote','1.50'); -- ok
-insert into products (product_id,product_name,price_money)
+insert into products (product_id,product_name,price)
 values ('5', 'Pasta di Mandorle', '10.00'); -- ?
-insert into products (product_id,product_name,price_money)
+insert into products (product_id,product_name,price)
 values ('6','Riso ','4.00'); -- ok
-insert into products (product_id,product_name,price_money)
+insert into products (product_id,product_name,price)
 values ('7','Vino', '22.00'); -- ok
-insert into products (product_id,product_name,price_money)
+insert into products (product_id,product_name,price)
 values ('8','Caffè', '1.99'); -- ok
-insert into products (product_id,product_name,price_money)
+insert into products (product_id,product_name,price)
 values ('9','Yogurt','1.20'); -- ok 
-insert into products (product_id,product_name,price_money)
+insert into products (product_id,product_name,price)
 values ('10','The','2.00'); -- 
-insert into products (product_id,product_name,price_money)
+insert into products (product_id,product_name,price)
 values ('11','Latte','1.10'); -- ok
-insert into products (product_id,product_name,price_money)
+insert into products (product_id,product_name,price)
 values ('12','Pasta integrale','1.60'); -- ok
-insert into products (product_id,product_name,price_money)
+insert into products (product_id,product_name,price)
 values ('13','Pomodori','2.10'); -- ok
-insert into products (product_id,product_name,price_money)
+insert into products (product_id,product_name,price)
 values ('14','Mele','1.80');  -- ok
-insert products (product_id,product_name,price_money)  
+insert products (product_id,product_name,price)  
 values ('15','Farro','3.50');   -- ok
-insert into products (product_id,product_name,price_money)
+insert into products (product_id,product_name,price)
 values ('16','Lenticchie','1.00');  -- ok
-insert into products (product_id,product_name,price_money)
+insert into products (product_id,product_name,price)
 values ('17','Orecchiette','3.00');  -- ok
-insert into products (product_id,product_name,price_money)
+insert into products (product_id,product_name,price)
 values ('18','Cioccolato','6.00');  -- manca
-insert into products (product_id,product_name,price_money)
+insert into products (product_id,product_name,price)
 values ('19','Maccheroncini di Riso e Lupini', '6.50');  -- ok
-insert into products (product_id,product_name,price_money)
+insert into products (product_id,product_name,price)
 values ('20','Cavatelli','2.50'); -- ok
-insert into products (product_id,product_name,price_money)
+insert into products (product_id,product_name,price)
 values ('21','Biscotti con Amarena','5.00');  -- ok
-insert into products (product_id,product_name,price_money)
+insert into products (product_id,product_name,price)
 values ('22','Bacche di Goji','3.50');  -- ok
-insert into products (product_id,product_name,price_money)
+insert into products (product_id,product_name,price)
 values('23','Tarallini al vino bianco','4.00');  -- ok
-insert into products (product_id,product_name,price_money)
+insert into products (product_id,product_name,price)
 values ('24','Taralli con uova','4.50');  -- ok
-insert into products (product_id,product_name,price_money)
+insert into products (product_id,product_name,price)
 values ('25','Tarallino con uova ricoperti di glassa','5.00');  -- ok
-insert into products (product_id,product_name,price_money)
+insert into products (product_id,product_name,price)
 values ('26','Mirtilli Rossi','1.70');  -- manca
-insert products (product_id,product_name,price_money)
+insert products (product_id,product_name,price)
 values ('27','Uvetta Sultanina','0.90');   -- manca
-insert products (product_id,product_name,price_money)
+insert products (product_id,product_name,price)
 values ('28','Zenzero Nero','4.20');  -- manca 
-insert products (product_id,product_name,price_money)
+insert products (product_id,product_name,price)
 values ('29','Pinoli','10.00');  -- manca 
-insert products (product_id,product_name,price_money)
+insert products (product_id,product_name,price)
 values ('30','Nocciole Sgusciate','3.50');   -- manca
-insert products (product_id,product_name,price_money)
+insert products (product_id,product_name,price)
 values ('31','Misto Frutta Benessere','3.30');  -- manca
-insert products (product_id,product_name,price_money)
+insert products (product_id,product_name,price)
 values ('32','Misto Frutta Energizzante','3.10');  -- manca
-insert products (product_id,product_name,price_money)
+insert products (product_id,product_name,price)
 values ('33','Origano di Agricoltura Biologica', '2.20'); -- manca
-insert products (product_id,product_name,price_money)
+insert products (product_id,product_name,price)
 values ('34','Olio Extravergine di Oliva','7.50');  -- manca
-insert products (product_id,product_name,price_money)
+insert products (product_id,product_name,price)
 values ('35','Semi di Rucola','1.60');   -- manca
-insert products (product_id,product_name,price_money)
+insert products (product_id,product_name,price)
 values ('36','Semi Insalata da Taglio','1.60');   -- manca 
-insert products (product_id,product_name,price_money)
+insert products (product_id,product_name,price)
 values ('37','Semi di Ravanello','1.60');  -- manca
-insert products (product_id,product_name,price_money)
+insert products (product_id,product_name,price)
 values ('38','Semi di Basilico','1.60'); -- manca
-insert products (product_id,product_name,price_money)
+insert products (product_id,product_name,price)
 values ('39','Cestini di Cocco','0.99');   -- manca
-insert products (product_id,product_name,price_money)
+insert products (product_id,product_name,price)
 values ('40','Farina Manitoba Bio','4.20');  -- manca
-insert products (product_id,product_name,price_money)
+insert products (product_id,product_name,price)
 values ('41','Farina di semi di Bio','5.20');  -- manca
-insert products (product_id,product_name,price_money)
+insert products (product_id,product_name,price)
 values ('42','Farina di Farro Integrale Bio','4.60');  -- manca
-insert products (product_id,product_name,price_money)
+insert products (product_id,product_name,price)
 values ('43','Farina Pane Bio','3.90');   -- manca
-insert products (product_id,product_name,price_money)
+insert products (product_id,product_name,price)
 values ('44','Farina Pizza Bio','3.90');  -- manca
-insert products (product_id,product_name,price_money)
+insert products (product_id,product_name,price)
 values ('45','Farina Dolci Bio','3.90');   -- manca
-insert products (product_id,product_name,price_money)
+insert products (product_id,product_name,price)
 values ('46','Farina di Semi di Canapa Sativa Bio','5.18');  -- manca
-insert products (product_id,product_name,price_money)
+insert products (product_id,product_name,price)
 values ('47','Mix Farina di Canapa Green','4.50');   -- manca
-insert products (product_id,product_name,price_money)
+insert products (product_id,product_name,price)
 values ('48','Mix Farina Riso Venere Nero','3.10');   -- manca
-insert products (product_id,product_name,price_money)
+insert products (product_id,product_name,price)
 values ('49','Mix Farina Riso Rosso','3.60');   -- manca
-insert products (product_id,product_name,price_money)
+insert products (product_id,product_name,price)
 values ('50','Pasta Madre essiccata di Frumento','13.00');  -- manca
-insert products (product_id,product_name,price_money)
+insert products (product_id,product_name,price)
 values ('51','Chips di ceci','1.40');  -- ok
  
 
@@ -198,7 +198,7 @@ insert into clients (client_id, username, psw, first_name, last_name, email, pho
 create table orders
 (
 product_name varchar(50),
-price_money varchar(50) 
+price varchar(50) 
  );
 
 
