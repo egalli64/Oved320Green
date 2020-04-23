@@ -77,16 +77,18 @@ public class AddCarrello extends HttpServlet {
 				request.setAttribute("message", "Spiacente, qualcosa è andato storto nel tuo carrello!");
 				rd.forward(request, response);
 			}
-		}}
+		 } finally {
+			 }
+		 }
 	}
-	
-			//	try (OrderDao dao = new OrderDao(ds)) {
-			//	Order or = new Order( request.getParameter("Product").toString());
-			//	dao.newOrder(or);
-			//
-			//	RequestDispatcher rs = request.getRequestDispatcher("/Registrazione.jsp");
-			//	rs.forward(request, response);
-			//}
+
+	// try (OrderDao dao = new OrderDao(ds)) {
+	// Order or = new Order( request.getParameter("Product").toString());
+	// dao.newOrder(or);
+	//
+	// RequestDispatcher rs = request.getRequestDispatcher("/Registrazione.jsp");
+	// rs.forward(request, response);
+	// }
 
 	/**
 	 * @see HttpServlet#HttpServlet()
