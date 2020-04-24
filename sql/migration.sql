@@ -65,55 +65,55 @@ values ('24','Taralli con uova','4.50');  -- ok
 insert into products (product_id,product_name,price)
 values ('25','Tarallino con uova ricoperti di glassa','5.00');  -- ok
 insert into products (product_id,product_name,price)
-values ('26','Mirtilli Rossi','1.70');  -- manca
+values ('26','Mirtilli Rossi','1.70');  -- ok
 insert products (product_id,product_name,price)
-values ('27','Uvetta Sultanina','0.90');   -- manca
+values ('27','Uvetta Sultanina','0.90');   -- ok
 insert products (product_id,product_name,price)
-values ('28','Zenzero Nero','4.20');  -- manca 
+values ('28','Zenzero Nero','4.20');  -- ok 
 insert products (product_id,product_name,price)
-values ('29','Pinoli','10.00');  -- manca 
+values ('29','Pinoli','10.00');  -- ok 
 insert products (product_id,product_name,price)
-values ('30','Nocciole Sgusciate','3.50');   -- manca
+values ('30','Nocciole Sgusciate','3.50');   -- ok
 insert products (product_id,product_name,price)
-values ('31','Misto Frutta Benessere','3.30');  -- manca
+values ('31','Misto Frutta Benessere','3.30');  -- ok
 insert products (product_id,product_name,price)
-values ('32','Misto Frutta Energizzante','3.10');  -- manca
+values ('32','Misto Frutta Energizzante','3.10');  -- ok
 insert products (product_id,product_name,price)
-values ('33','Origano di Agricoltura Biologica', '2.20'); -- manca
+values ('33','Origano di Agricoltura Biologica', '2.20'); -- ok
 insert products (product_id,product_name,price)
-values ('34','Olio Extravergine di Oliva','7.50');  -- manca
+values ('34','Olio Extravergine di Oliva','7.50');  -- ok
 insert products (product_id,product_name,price)
-values ('35','Semi di Rucola','1.60');   -- manca
+values ('35','Semi di Rucola','1.60');   -- ok
 insert products (product_id,product_name,price)
-values ('36','Semi Insalata da Taglio','1.60');   -- manca 
+values ('36','Semi Insalata da Taglio','1.60');   -- ok 
 insert products (product_id,product_name,price)
-values ('37','Semi di Ravanello','1.60');  -- manca
+values ('37','Semi di Ravanello','1.60');  -- ok
 insert products (product_id,product_name,price)
-values ('38','Semi di Basilico','1.60'); -- manca
+values ('38','Semi di Basilico','1.60'); -- ok
 insert products (product_id,product_name,price)
-values ('39','Cestini di Cocco','0.99');   -- manca
+values ('39','Cestini di Cocco','0.99');   -- ok
 insert products (product_id,product_name,price)
-values ('40','Farina Manitoba Bio','4.20');  -- manca
+values ('40','Farina Manitoba Bio','4.20');  -- ok
 insert products (product_id,product_name,price)
-values ('41','Farina di semi di Bio','5.20');  -- manca
+values ('41','Farina di semi di Bio','5.20');  -- ok
 insert products (product_id,product_name,price)
-values ('42','Farina di Farro Integrale Bio','4.60');  -- manca
+values ('42','Farina di Farro Integrale Bio','4.60');  -- ok
 insert products (product_id,product_name,price)
-values ('43','Farina Pane Bio','3.90');   -- manca
+values ('43','Farina Pane Bio','3.90');   -- ok
 insert products (product_id,product_name,price)
-values ('44','Farina Pizza Bio','3.90');  -- manca
+values ('44','Farina Pizza Bio','3.90');  -- ok
 insert products (product_id,product_name,price)
-values ('45','Farina Dolci Bio','3.90');   -- manca
+values ('45','Farina Dolci Bio','3.90');   -- ok
 insert products (product_id,product_name,price)
-values ('46','Farina di Semi di Canapa Sativa Bio','5.18');  -- manca
+values ('46','Farina di Semi di Canapa Sativa Bio','5.18');  -- ok
 insert products (product_id,product_name,price)
-values ('47','Mix Farina di Canapa Green','4.50');   -- manca
+values ('47','Mix Farina di Canapa Green','4.50');   -- ok
 insert products (product_id,product_name,price)
-values ('48','Mix Farina Riso Venere Nero','3.10');   -- manca
+values ('48','Mix Farina Riso Venere Nero','3.10');   -- ok
 insert products (product_id,product_name,price)
-values ('49','Mix Farina Riso Rosso','3.60');   -- manca
+values ('49','Mix Farina Riso Rosso','3.60');   -- ok
 insert products (product_id,product_name,price)
-values ('50','Pasta Madre essiccata di Frumento','13.00');  -- manca
+values ('50','Pasta Madre essiccata di Frumento','13.00');  -- ok
 insert products (product_id,product_name,price)
 values ('51','Chips di ceci','1.40');  -- ok
  

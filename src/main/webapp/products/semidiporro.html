@@ -18,8 +18,8 @@
 
 <body>
 	<nav class="navbar navbar-expand-mr sticky-top navbar-light bg-light">
-		<a class="navbar-brand" href="../index.html"><img
-			src="../img-Index/home.png" width=5%></a>
+		<a class="navbar-brand" href="index.html"><img
+			src="img-Index/home.png" width=5%></a>
 		<h1 class="MainTitleGreen" id="top">Green Taste</h1>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
@@ -30,37 +30,38 @@
 		<div class="nav-item" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active"><a class="nav-link"
-					href="../presentazione.html">Chi siamo</a></li>
+					href="presentazione.html">Chi siamo</a></li>
 				<span class="sr-only">(current)</span>
 				</a>
 				<li class="nav-item dropdown active"><a
-					class="nav-link dropdown-toggle" href="../Products.html"
+					class="nav-link dropdown-toggle" href="Products.html"
 					id="navbarDropdown" role="button" data-toggle="dropdown"
 					aria-haspopup="true" aria-expanded="false"> Prodotti </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="./colazione.html">Dolci
+						<a class="dropdown-item" href="./products/colazione.html">Dolci
 							e colazione</a> <a class="dropdown-item"
-							href="../products/verdura.html">Frutta, Verdura, Spezie</a><a
-							class="dropdown-item" href="./paste.html">Pasta,
+							href="./products/verdura.html">Frutta, Verdura, Spezie</a><a
+							class="dropdown-item" href="./products/paste.html">Pasta,
 							farine, legumi</a>
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="../Products.html">Tutti i prodotti</a>
+						<a class="dropdown-item" href="Products.html">Tutti i prodotti</a>
 					</div></li>
 				<li class="nav-item dropdown active"><a
 					class="nav-link dropdown-toggle" href="accedi.html"
 					id="navbarDropdown" role="button" data-toggle="dropdown"
 					aria-haspopup="true" aria-expanded="true">Utente</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="../accedi.html">Accedi</a> <a
-							class="dropdown-item" href="../Registrazione.html">Registrati</a>
+						<a class="dropdown-item" href="accedi.html">Accedi</a> <a
+							class="dropdown-item" href="Registrazione.html">Registrati</a>
 					</div></li>
-				<a class="navbar-brand" href="../carrello.html"><img
-					src="../img-Index/smart-cart.png" width=5%></a>
+				<a class="navbar-brand" href="carrello.html"><img
+					src="img-Index/smart-cart.png" width=5%></a>
 			</ul>
 	</nav>
+
 	<!-- Prodotti   -->
 
-	<h2 class="subTitleProd">Cestini di Cocco</h2>
+	<h2 class="subTitleProd">Semi di Porro</h2>
 
 	<br>
 	<br>
@@ -73,7 +74,7 @@
 			<div class="col">
 				<p>
 					<!--	QUI URL IMMAGINE dentro src -->
-					&nbsp;&nbsp; <img src="../imgs/cestinijpg.jpg" title="Half size"
+					&nbsp;&nbsp; <img src="../imgs/semidiporro.jpg" title="Half size"
 						width="80%"> <br> &nbsp;&nbsp;
 				<p class="generalProd" id="centered">
 					<svg class="bi bi-heart" width="1em" height="1em"
@@ -88,14 +89,14 @@
 			</div>
 			<div class="col">
 				<h3 id="descrizione">Descrizione</h3>
-				<p class="generalProd">Il nostro obiettivo è quello di ridurre
-					sempre di più l’utilizzo di plastica per i vasi. Vi proponiamo, per
-					piantare i nostri semi, dei vasi di cocco biodegradabili. E'molto
-					alta l’attenzione verso il tema ecologico e noi, che da tempo ci
-					occupiamo di inclusione sociale e di valori etici, vorremmo puntare
-					sempre più sul biologico, per invogliare a un comportamento
-					ecosostenibile. E' utilissimo per trapiantare le vostre pianti in
-					maniera semplice e veloce.</p>
+				<p class="generalProd">Il Porro è un ortaggio da foglia, apprezzato dalle popolazioni 
+				   del Mediterranei fin dal tempo degli Egizi e dei Romani; la sua coltivazione è 
+				   diffusa in Europa, America e Asia.
+				   E' presente sul mercato specialmente nel periodo autunno-invernale. 
+				   E' coltivato in tutte le regioni italiane, specialmente al Centro-Nord.
+                   Viene utilizzata la parte basale delle foglie, che formano un falso fusto di 20-30 cm 
+                   di lunghezza e 3-5 di diametro; questo, sottoposto ad eziolatura, 
+                   costituisce la parte edule. </p>
 				<br>
 				<p>
 					<br>
@@ -103,12 +104,10 @@
 
 				<!--PREZZO -->
 
-				<p id="prezzo">2.20 &euro; - 3 vasi</p>
+				<p id="prezzo">1.80 &euro;/kg</p>
 				<br>
-				<form action="/green/AddCarrello">
 				<p id="centered">
-					<input type="hidden" name="Product" value="cestini di cocco" size="30" required>
-					<button type="submit" class="btn btn-success">
+					<button type="button" class="btn btn-success">
 						<svg class="bi bi-bucket" width="1em" height="1em"
 							viewBox="0 0 16 16" fill="currentColor"
 							xmlns="http://www.w3.org/2000/svg">
@@ -122,7 +121,6 @@
 						Aggiungi al carrello
 					</button>
 				</p>
-				</form>
 			</div>
 
 		</div>
@@ -140,21 +138,21 @@
 				<tr>
 					<th scope="col"></th>
 					<th scope="col" width="25%">TABELLA RIEPILOGATIVA <br>
-						Pacchetto di valore di una fodera
+						Valori medi per 100 g di prodotto
 					</th>
 					<th scope="col" width="75%"></th>
 			</thead>
 			<tbody>
 				<tr>
 					<th scope="row">&nbsp;</th>
-					<td>Dimensioni del cesto</td>
-					<td>8 x 8 cm</td>
+					<td>Valori Nutrizionali</td>
+					<td>8KJ - 29kcal</td>
 
 				</tr>
 				<tr>
 					<th scope="row">&nbsp;</th>
-					<td>Diametro</td>
-					<td>10.5</td>
+					<td>Peso</td>
+					<td>1000 semi pari a 2.5 - 3.3 grammi</td>
 
 				</tr>
 			</tbody>
@@ -163,8 +161,9 @@
 	<hr>
 
 	<div class="container-fluid">
-		<a href="javascript:history.go(-1)" onMouseOver="self.status=document.referrer; return true">Torna indietro</a>
-		
+		<p>
+			&nbsp;&nbsp; Torna <a href="../Products.html">indietro</a>
+		</p>
 		<hr>
 	</div>
 
